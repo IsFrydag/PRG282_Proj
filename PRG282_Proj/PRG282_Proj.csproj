@@ -64,6 +64,12 @@
     <Compile Include="frmDeleteStudent.Designer.cs">
       <DependentUpon>frmDeleteStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmUpdateStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateStudent.Designer.cs">
+      <DependentUpon>frmUpdateStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="NotifyEvent.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
