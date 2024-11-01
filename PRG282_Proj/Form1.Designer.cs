@@ -38,6 +38,7 @@
             this.lblName2 = new System.Windows.Forms.Label();
             this.lblName1 = new System.Windows.Forms.Label();
             this.lblTITLE = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnSummaryReport
@@ -157,11 +158,21 @@
             this.lblTITLE.TabIndex = 10;
             this.lblTITLE.Text = "PRG 282 PROJECT";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(672, 333);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "label1";
+            // 
             // frmHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSummaryReport);
             this.Controls.Add(this.btnDeleteStudent);
             this.Controls.Add(this.btnUpdateStudentInfo);
@@ -192,6 +203,7 @@
         private System.Windows.Forms.Label lblName2;
         private System.Windows.Forms.Label lblName1;
         private System.Windows.Forms.Label lblTITLE;
+        private System.Windows.Forms.Label label1;
     }
 }
 
