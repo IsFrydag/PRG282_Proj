@@ -58,6 +58,12 @@
     <Compile Include="frmAddStudent.Designer.cs">
       <DependentUpon>frmAddStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDeleteStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeleteStudent.Designer.cs">
+      <DependentUpon>frmDeleteStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="NotifyEvent.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -66,6 +72,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddStudent.resx">
       <DependentUpon>frmAddStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeleteStudent.resx">
+      <DependentUpon>frmDeleteStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
