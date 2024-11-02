@@ -32,6 +32,7 @@ namespace PRG282_Proj
                 public int Age { get; set; }
                 public string Course { get; set; }
             }
+
         private TextBox txtStudentID;
         private TextBox txtStudentName;
         private TextBox txtStudentAge;
