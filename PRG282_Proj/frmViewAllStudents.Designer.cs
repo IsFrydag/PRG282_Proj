@@ -43,6 +43,7 @@
             this.btnViewAllStudents.TabIndex = 0;
             this.btnViewAllStudents.Text = "View All";
             this.btnViewAllStudents.UseVisualStyleBackColor = true;
+            this.btnViewAllStudents.Click += new System.EventHandler(this.btnViewAllStudents_Click);
             // 
             // lblViewAllStudents
             // 
@@ -83,6 +84,7 @@
             this.Controls.Add(this.btnViewAllStudents);
             this.Name = "frmViewAllStudents";
             this.Text = "frmViewAllStudents";
+            this.Load += new System.EventHandler(this.frmViewAllStudents_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
