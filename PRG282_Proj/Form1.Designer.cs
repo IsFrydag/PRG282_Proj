@@ -79,6 +79,7 @@
             this.btnUpdateStudentInfo.TabIndex = 17;
             this.btnUpdateStudentInfo.Text = "Update Student Informatin";
             this.btnUpdateStudentInfo.UseVisualStyleBackColor = false;
+            this.btnUpdateStudentInfo.Click += new System.EventHandler(this.btnUpdateStudentInfo_Click_1);
             // 
             // btnViewAllStudents
             // 

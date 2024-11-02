@@ -83,5 +83,11 @@ namespace PRG282_Proj
         {
 
         }
+
+        private void btnUpdateStudentInfo_Click_1(object sender, EventArgs e)
+        {
+            frmUpdateStudent f2 = new frmUpdateStudent();
+            f2.Show();
+        }
     }
 }

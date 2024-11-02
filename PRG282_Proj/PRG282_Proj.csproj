@@ -82,6 +82,9 @@
     <EmbeddedResource Include="frmDeleteStudent.resx">
       <DependentUpon>frmDeleteStudent.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateStudent.resx">
+      <DependentUpon>frmUpdateStudent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
