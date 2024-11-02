@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace PRG282_Proj
 {
-    public partial class frmDeleteStudent : Form
+    public partial class frmSummaryReport : Form
     {
-        public frmDeleteStudent()
+        public frmSummaryReport()
         {
             InitializeComponent();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
