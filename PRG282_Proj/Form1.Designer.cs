@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHomePage));
             this.btnSummaryReport = new System.Windows.Forms.Button();
             this.btnDeleteStudent = new System.Windows.Forms.Button();
             this.btnUpdateStudentInfo = new System.Windows.Forms.Button();
@@ -37,44 +38,49 @@
             this.lblName3 = new System.Windows.Forms.Label();
             this.lblName2 = new System.Windows.Forms.Label();
             this.lblName1 = new System.Windows.Forms.Label();
-            this.lblTITLE = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSummaryReport
             // 
-            this.btnSummaryReport.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnSummaryReport.BackColor = System.Drawing.Color.CadetBlue;
             this.btnSummaryReport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSummaryReport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSummaryReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSummaryReport.Location = new System.Drawing.Point(255, 322);
+            this.btnSummaryReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSummaryReport.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSummaryReport.Location = new System.Drawing.Point(280, 353);
             this.btnSummaryReport.Name = "btnSummaryReport";
-            this.btnSummaryReport.Size = new System.Drawing.Size(283, 39);
+            this.btnSummaryReport.Size = new System.Drawing.Size(219, 39);
             this.btnSummaryReport.TabIndex = 19;
             this.btnSummaryReport.Text = "Summary";
             this.btnSummaryReport.UseVisualStyleBackColor = false;
             // 
             // btnDeleteStudent
             // 
-            this.btnDeleteStudent.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnDeleteStudent.BackColor = System.Drawing.Color.CadetBlue;
             this.btnDeleteStudent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeleteStudent.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDeleteStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteStudent.Location = new System.Drawing.Point(255, 277);
+            this.btnDeleteStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteStudent.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnDeleteStudent.Location = new System.Drawing.Point(280, 295);
             this.btnDeleteStudent.Name = "btnDeleteStudent";
-            this.btnDeleteStudent.Size = new System.Drawing.Size(283, 39);
+            this.btnDeleteStudent.Size = new System.Drawing.Size(219, 39);
             this.btnDeleteStudent.TabIndex = 18;
             this.btnDeleteStudent.Text = "Remove Student";
             this.btnDeleteStudent.UseVisualStyleBackColor = false;
             // 
             // btnUpdateStudentInfo
             // 
-            this.btnUpdateStudentInfo.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnUpdateStudentInfo.BackColor = System.Drawing.Color.CadetBlue;
             this.btnUpdateStudentInfo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdateStudentInfo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnUpdateStudentInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateStudentInfo.Location = new System.Drawing.Point(255, 228);
+            this.btnUpdateStudentInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateStudentInfo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnUpdateStudentInfo.Location = new System.Drawing.Point(280, 236);
             this.btnUpdateStudentInfo.Name = "btnUpdateStudentInfo";
-            this.btnUpdateStudentInfo.Size = new System.Drawing.Size(283, 39);
+            this.btnUpdateStudentInfo.Size = new System.Drawing.Size(219, 39);
             this.btnUpdateStudentInfo.TabIndex = 17;
             this.btnUpdateStudentInfo.Text = "Update Student Information";
             this.btnUpdateStudentInfo.UseVisualStyleBackColor = false;
@@ -82,26 +88,29 @@
             // 
             // btnViewAllStudents
             // 
-            this.btnViewAllStudents.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnViewAllStudents.BackColor = System.Drawing.Color.CadetBlue;
             this.btnViewAllStudents.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnViewAllStudents.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnViewAllStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewAllStudents.Location = new System.Drawing.Point(255, 183);
+            this.btnViewAllStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewAllStudents.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnViewAllStudents.Location = new System.Drawing.Point(280, 174);
             this.btnViewAllStudents.Name = "btnViewAllStudents";
-            this.btnViewAllStudents.Size = new System.Drawing.Size(283, 39);
+            this.btnViewAllStudents.Size = new System.Drawing.Size(219, 39);
             this.btnViewAllStudents.TabIndex = 16;
             this.btnViewAllStudents.Text = "View All Students";
             this.btnViewAllStudents.UseVisualStyleBackColor = false;
+            this.btnViewAllStudents.Click += new System.EventHandler(this.btnViewAllStudents_Click_1);
             // 
             // btnAddStudent
             // 
-            this.btnAddStudent.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnAddStudent.BackColor = System.Drawing.Color.CadetBlue;
             this.btnAddStudent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddStudent.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAddStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddStudent.Location = new System.Drawing.Point(255, 138);
+            this.btnAddStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddStudent.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAddStudent.Location = new System.Drawing.Point(280, 114);
             this.btnAddStudent.Name = "btnAddStudent";
-            this.btnAddStudent.Size = new System.Drawing.Size(283, 39);
+            this.btnAddStudent.Size = new System.Drawing.Size(219, 39);
             this.btnAddStudent.TabIndex = 15;
             this.btnAddStudent.Text = "Add New Student";
             this.btnAddStudent.UseVisualStyleBackColor = false;
@@ -111,7 +120,7 @@
             // 
             this.lblName4.AutoSize = true;
             this.lblName4.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName4.Location = new System.Drawing.Point(11, 424);
+            this.lblName4.Location = new System.Drawing.Point(237, 9);
             this.lblName4.Name = "lblName4";
             this.lblName4.Size = new System.Drawing.Size(96, 16);
             this.lblName4.TabIndex = 14;
@@ -121,7 +130,7 @@
             // 
             this.lblName3.AutoSize = true;
             this.lblName3.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName3.Location = new System.Drawing.Point(12, 408);
+            this.lblName3.Location = new System.Drawing.Point(12, 9);
             this.lblName3.Name = "lblName3";
             this.lblName3.Size = new System.Drawing.Size(90, 16);
             this.lblName3.TabIndex = 13;
@@ -131,7 +140,7 @@
             // 
             this.lblName2.AutoSize = true;
             this.lblName2.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName2.Location = new System.Drawing.Point(12, 392);
+            this.lblName2.Location = new System.Drawing.Point(679, 9);
             this.lblName2.Name = "lblName2";
             this.lblName2.Size = new System.Drawing.Size(109, 16);
             this.lblName2.TabIndex = 12;
@@ -141,28 +150,39 @@
             // 
             this.lblName1.AutoSize = true;
             this.lblName1.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName1.Location = new System.Drawing.Point(12, 376);
+            this.lblName1.Location = new System.Drawing.Point(460, 9);
             this.lblName1.Name = "lblName1";
             this.lblName1.Size = new System.Drawing.Size(95, 16);
             this.lblName1.TabIndex = 11;
             this.lblName1.Text = "Heiner Freitag";
             // 
-            // lblTITLE
+            // label1
             // 
-            this.lblTITLE.AutoSize = true;
-            this.lblTITLE.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblTITLE.Font = new System.Drawing.Font("Palatino Linotype", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTITLE.Location = new System.Drawing.Point(170, 45);
-            this.lblTITLE.Name = "lblTITLE";
-            this.lblTITLE.Size = new System.Drawing.Size(447, 67);
-            this.lblTITLE.TabIndex = 10;
-            this.lblTITLE.Text = "PRG 282 PROJECT";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Lucida Bright", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(274, 55);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(240, 33);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "PRG282 Project";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(15, 417);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(23, 21);
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
             // 
             // frmHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSummaryReport);
             this.Controls.Add(this.btnDeleteStudent);
             this.Controls.Add(this.btnUpdateStudentInfo);
@@ -172,10 +192,12 @@
             this.Controls.Add(this.lblName3);
             this.Controls.Add(this.lblName2);
             this.Controls.Add(this.lblName1);
-            this.Controls.Add(this.lblTITLE);
+            this.MaximumSize = new System.Drawing.Size(816, 489);
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "frmHomePage";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmHomePage_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,7 +214,8 @@
         private System.Windows.Forms.Label lblName3;
         private System.Windows.Forms.Label lblName2;
         private System.Windows.Forms.Label lblName1;
-        private System.Windows.Forms.Label lblTITLE;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -44,10 +44,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(197, 63);
+            this.label1.Font = new System.Drawing.Font("Lucida Bright", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(267, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(398, 55);
+            this.label1.Size = new System.Drawing.Size(252, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "Register Student";
             // 
@@ -57,9 +57,9 @@
             this.lblSID.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSID.Location = new System.Drawing.Point(112, 145);
             this.lblSID.Name = "lblSID";
-            this.lblSID.Size = new System.Drawing.Size(51, 25);
+            this.lblSID.Size = new System.Drawing.Size(38, 25);
             this.lblSID.TabIndex = 1;
-            this.lblSID.Text = "ID - ";
+            this.lblSID.Text = "ID:";
             // 
             // lblSName
             // 
@@ -67,9 +67,9 @@
             this.lblSName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSName.Location = new System.Drawing.Point(112, 188);
             this.lblSName.Name = "lblSName";
-            this.lblSName.Size = new System.Drawing.Size(81, 25);
+            this.lblSName.Size = new System.Drawing.Size(74, 25);
             this.lblSName.TabIndex = 2;
-            this.lblSName.Text = "Name -";
+            this.lblSName.Text = "Name:";
             // 
             // label4
             // 
@@ -77,9 +77,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(112, 232);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 25);
+            this.label4.Size = new System.Drawing.Size(62, 25);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Age -";
+            this.label4.Text = "Age :";
             // 
             // label5
             // 
@@ -87,9 +87,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(112, 279);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 25);
+            this.label5.Size = new System.Drawing.Size(93, 25);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Course -";
+            this.label5.Text = "Course :";
             // 
             // txtStudentID
             // 
@@ -114,6 +114,7 @@
             // 
             // cbStudentCourse
             // 
+            this.cbStudentCourse.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.cbStudentCourse.FormattingEnabled = true;
             this.cbStudentCourse.Items.AddRange(new object[] {
             "BCOMP",
@@ -124,16 +125,17 @@
             this.cbStudentCourse.Name = "cbStudentCourse";
             this.cbStudentCourse.Size = new System.Drawing.Size(307, 21);
             this.cbStudentCourse.TabIndex = 8;
+            this.cbStudentCourse.Text = "Choose a course..";
             // 
             // btnRegister
             // 
             this.btnRegister.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.Location = new System.Drawing.Point(267, 327);
+            this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegister.Location = new System.Drawing.Point(609, 282);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(260, 26);
+            this.btnRegister.Size = new System.Drawing.Size(91, 26);
             this.btnRegister.TabIndex = 9;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = false;
@@ -144,10 +146,10 @@
             this.btnBack.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(333, 406);
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(334, 368);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(125, 32);
+            this.btnBack.Size = new System.Drawing.Size(83, 24);
             this.btnBack.TabIndex = 10;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;

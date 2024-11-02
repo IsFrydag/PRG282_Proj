@@ -14,9 +14,14 @@ namespace PRG282_Proj
 {
     public partial class frmUpdateStudent : Form
     {
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmHomePage f7 = new frmHomePage();
+            f7.Show();
 
-       
-            static string fileName = "students.txt";
+        }
+
+        static string fileName = "students.txt";
             private List<Student> students = new List<Student>();
 
             public frmUpdateStudent()
@@ -84,7 +89,7 @@ namespace PRG282_Proj
 
                 if (student != null)
                 {
-                    txtStudentName.Text = student.Name;
+                  txtStudentName.Text = student.Name;
                     txtStudentAge.Text = student.Age.ToString();
                     cbStudentCourse.Text = student.Course;
                 }
@@ -93,5 +98,7 @@ namespace PRG282_Proj
                     MessageBox.Show("Student not found.");
                 }
             }
-        }
+
+      
+    }
     }

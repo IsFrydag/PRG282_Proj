@@ -89,5 +89,11 @@ namespace PRG282_Proj
             frmUpdateStudent f2 = new frmUpdateStudent();
             f2.Show();
         }
+
+        private void btnViewAllStudents_Click_1(object sender, EventArgs e)
+        {
+            frmViewAllStudents f3 = new frmViewAllStudents();
+            f3.Show();
+        }
     }
 }
