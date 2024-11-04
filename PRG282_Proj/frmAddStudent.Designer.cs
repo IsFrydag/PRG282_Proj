@@ -97,6 +97,7 @@
             this.txtStudentID.Name = "txtStudentID";
             this.txtStudentID.Size = new System.Drawing.Size(159, 20);
             this.txtStudentID.TabIndex = 5;
+            this.txtStudentID.TextChanged += new System.EventHandler(this.txtStudentID_TextChanged);
             // 
             // txtStudentName
             // 
@@ -104,6 +105,7 @@
             this.txtStudentName.Name = "txtStudentName";
             this.txtStudentName.Size = new System.Drawing.Size(159, 20);
             this.txtStudentName.TabIndex = 6;
+            this.txtStudentName.TextChanged += new System.EventHandler(this.txtStudentName_TextChanged);
             // 
             // txtStudentAge
             // 
