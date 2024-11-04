@@ -46,5 +46,11 @@ namespace PRG282_Proj
                 dt.Rows.Add(rows);
             }
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            frmHomePage frm = new frmHomePage();
+            frm.Show();
+        }
     }
 }

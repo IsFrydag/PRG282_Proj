@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,16 @@ namespace PRG282_Proj
 {
     public partial class frmUpdateStudent : Form
     {
+        static string fileName = @"students.txt";
+
+        public class Student
+        {
+            public string ID { get; set; }
+            public string Name { get; set; }
+            public int Age { get; set; }
+            public string Course { get; set; }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             frmHomePage f7 = new frmHomePage();
@@ -21,84 +32,113 @@ namespace PRG282_Proj
 
         }
 
-        static string fileName = "students.txt";
-            private List<Student> students = new List<Student>();
+        public frmUpdateStudent()
+        {
+            InitializeComponent();
+            InitializeDataGridView();
+            LoadStudentsFromFile();
+          
 
-            public frmUpdateStudent()
-            {
-                InitializeComponent();
-           
+
         }
+       
+        private void InitializeDataGridView()
+        {
+            dataGridView1.ColumnCount = 4;
+            dataGridView1.Columns[0].Name = "ID";
+            dataGridView1.Columns[1].Name = "Name";
+            dataGridView1.Columns[2].Name = "Age";
+            dataGridView1.Columns[3].Name = "Course";
+        }
+        private List<Student> students = new List<Student>();
 
-            public class Student
+        private void LoadStudentsFromFile()
+        {
+            if (File.Exists(fileName))
             {
-                public string ID { get; set; }
-                public string Name { get; set; }
-                public int Age { get; set; }
-                public string Course { get; set; }
-            }
-
-        private TextBox txtStudentID;
-        private TextBox txtStudentName;
-        private TextBox txtStudentAge;
-        private ComboBox cbStudentCourse;
-
-        private Student FindStudentById(string studentID)
-            {
-                if (File.Exists(fileName))
+                string[] lines = File.ReadAllLines(fileName);
+                foreach (string line in lines)
                 {
-                    using (StreamReader reader = new StreamReader(fileName))
+                    string[] values = line.Split(',');
+                    if (values.Length == 4)
                     {
-                        string line;
-                        while ((line = reader.ReadLine()) != null)
+                        students.Add(new Student
                         {
-                            string[] studentData = line.Split(',');
-                            if (studentData.Length == 4)
-                            {
-                                string id = studentData[0].Trim();
-                                string name = studentData[1].Trim();
-                                int age = int.Parse(studentData[2].Trim());
-                                string course = studentData[3].Trim();
-
-                                if (id == studentID)
-                                {
-                                    return new Student
-                                    {
-                                        ID = id,
-                                        Name = name,
-                                        Age = age,
-                                        Course = course
-                                    };
-                                }
-                            }
-                        }
+                            ID = values[0].Trim(),
+                            Name = values[1].Trim(),
+                            Age = int.Parse(values[2].Trim()),
+                            Course = values[3].Trim()
+                        });
                     }
                 }
-                return null;
             }
+        }
 
-            private Student SearchStudent(string id)
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+            string studentID = StudentID.Text.Trim(); 
+            dataGridView1.Rows.Clear();
+
+            bool studentFound = false;
+
+            foreach (Student student in students)
             {
-                return students.FirstOrDefault(s => s.ID == id);
-            }
-
-            private void btnSearch_Click(object sender, EventArgs e)
-            {
-                string studentID = StudentID.Text;
-                Student student = FindStudentById(studentID);
-
-                if (student != null)
+                if (string.Equals(student.ID, studentID, StringComparison.OrdinalIgnoreCase))
                 {
-                  txtStudentName.Text = student.Name;
-                    txtStudentAge.Text = student.Age.ToString();
-                    cbStudentCourse.Text = student.Course;
-                }
-                else
-                {
-                    MessageBox.Show("Student not found.");
+                    dataGridView1.Rows.Add(student.ID, student.Name, student.Age, student.Course);
+                    studentFound = true;
+                    break; 
                 }
             }
 
-      
+            if (!studentFound)
+            {
+                MessageBox.Show("Student not found.");
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+            string studentID = txtStudentID.Text;
+            string studentName = txtStudentName.Text;
+            int studentAge = Convert.ToInt32(txtStudentAge.Text);
+            string studentCourse = cbStudentCourse.Text;
+
+            Student studentToUpdate = students.FirstOrDefault(s => s.ID == studentID);
+
+            if (studentToUpdate != null)
+            {
+               
+                studentToUpdate.Name = studentName;
+                studentToUpdate.Age = studentAge;
+                studentToUpdate.Course = studentCourse;
+
+               
+                SaveStudentsToFile();
+
+                MessageBox.Show("Student information updated successfully.");
+                txtStudentID.Clear();
+                txtStudentName.Clear();
+                txtStudentAge.Clear();
+                dataGridView1.ClearSelection();
+            }
+            else
+            {
+                MessageBox.Show("Student ID not found.");
+            }
+        
     }
+        private void SaveStudentsToFile()
+        {
+            using (StreamWriter writer = new StreamWriter(fileName))
+            {
+                foreach (Student student in students)
+                {
+                    writer.WriteLine($"{student.ID}, {student.Name}, {student.Age}, {student.Course}");
+                }
+            }
+        }
     }
+}
