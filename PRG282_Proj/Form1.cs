@@ -34,6 +34,8 @@ namespace PRG282_Proj
 
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
+          //  button1.FlatStyle = FlatStyle.Flat;
+         //   button1.FlatAppearance.BorderSize = 0;
 
             frmAddStudent frmAdd = new frmAddStudent();
 
@@ -94,6 +96,17 @@ namespace PRG282_Proj
         {
             frmViewAllStudents f3 = new frmViewAllStudents();
             f3.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmOurTeam us = new frmOurTeam();
+            us.Show();
         }
     }
 }

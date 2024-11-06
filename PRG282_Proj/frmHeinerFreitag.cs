@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace PRG282_Proj
 {
-    public partial class frmSummaryReport : Form
+    public partial class frmHeinerFreitag : Form
     {
-        public frmSummaryReport()
+        public frmHeinerFreitag()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            frmOurTeam us = new frmOurTeam();
-            us.Show();
         }
     }
 }

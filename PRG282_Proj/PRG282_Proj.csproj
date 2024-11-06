@@ -58,11 +58,41 @@
     <Compile Include="frmAddStudent.Designer.cs">
       <DependentUpon>frmAddStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmArmandSnyman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArmandSnyman.Designer.cs">
+      <DependentUpon>frmArmandSnyman.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDeleteStudent.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDeleteStudent.Designer.cs">
       <DependentUpon>frmDeleteStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHeinerFreitag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHeinerFreitag.Designer.cs">
+      <DependentUpon>frmHeinerFreitag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJanaRademan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJanaRademan.Designer.cs">
+      <DependentUpon>frmJanaRademan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMilenkeField.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMilenkeField.Designer.cs">
+      <DependentUpon>frmMilenkeField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOurTeam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOurTeam.Designer.cs">
+      <DependentUpon>frmOurTeam.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSummaryReport.cs">
       <SubType>Form</SubType>
@@ -91,8 +121,23 @@
     <EmbeddedResource Include="frmAddStudent.resx">
       <DependentUpon>frmAddStudent.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmArmandSnyman.resx">
+      <DependentUpon>frmArmandSnyman.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDeleteStudent.resx">
       <DependentUpon>frmDeleteStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHeinerFreitag.resx">
+      <DependentUpon>frmHeinerFreitag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJanaRademan.resx">
+      <DependentUpon>frmJanaRademan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMilenkeField.resx">
+      <DependentUpon>frmMilenkeField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOurTeam.resx">
+      <DependentUpon>frmOurTeam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSummaryReport.resx">
       <DependentUpon>frmSummaryReport.cs</DependentUpon>

@@ -161,5 +161,11 @@ namespace PRG282_Proj
                 }
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmOurTeam us = new frmOurTeam();
+            us.Show();
+        }
     }
 }

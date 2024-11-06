@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace PRG282_Proj
 {
-    public partial class frmSummaryReport : Form
+    public partial class frmJanaRademan : Form
     {
-        public frmSummaryReport()
+        public frmJanaRademan()
         {
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
-            frmOurTeam us = new frmOurTeam();
-            us.Show();
+            Application.Exit();
         }
     }
 }
