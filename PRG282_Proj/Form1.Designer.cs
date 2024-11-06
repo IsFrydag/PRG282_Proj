@@ -60,6 +60,7 @@
             this.btnSummaryReport.Text = "Summary";
             this.btnSummaryReport.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSummaryReport.UseVisualStyleBackColor = false;
+            this.btnSummaryReport.Click += new System.EventHandler(this.btnSummaryReport_Click_1);
             // 
             // btnDeleteStudent
             // 
@@ -79,6 +80,7 @@
             this.btnDeleteStudent.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnDeleteStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnDeleteStudent.UseVisualStyleBackColor = false;
+            this.btnDeleteStudent.Click += new System.EventHandler(this.btnDeleteStudent_Click_1);
             // 
             // btnUpdateStudentInfo
             // 

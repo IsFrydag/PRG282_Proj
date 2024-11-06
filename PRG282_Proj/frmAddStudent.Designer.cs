@@ -218,6 +218,7 @@
             this.btnSummaryReport.Text = "Summary";
             this.btnSummaryReport.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSummaryReport.UseVisualStyleBackColor = false;
+            this.btnSummaryReport.Click += new System.EventHandler(this.btnSummaryReport_Click);
             // 
             // btnDeleteStudent
             // 
@@ -237,6 +238,7 @@
             this.btnDeleteStudent.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnDeleteStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnDeleteStudent.UseVisualStyleBackColor = false;
+            this.btnDeleteStudent.Click += new System.EventHandler(this.btnDeleteStudent_Click);
             // 
             // btnUpdateStudentInfo
             // 
@@ -257,6 +259,7 @@
             this.btnUpdateStudentInfo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnUpdateStudentInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnUpdateStudentInfo.UseVisualStyleBackColor = false;
+            this.btnUpdateStudentInfo.Click += new System.EventHandler(this.btnUpdateStudentInfo_Click);
             // 
             // btnViewAllStudents
             // 
@@ -276,6 +279,7 @@
             this.btnViewAllStudents.Text = "View All Students";
             this.btnViewAllStudents.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnViewAllStudents.UseVisualStyleBackColor = false;
+            this.btnViewAllStudents.Click += new System.EventHandler(this.btnViewAllStudents_Click);
             // 
             // button2
             // 

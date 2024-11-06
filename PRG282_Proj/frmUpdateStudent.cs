@@ -27,8 +27,9 @@ namespace PRG282_Proj
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmHomePage f7 = new frmHomePage();
-            f7.Show();
+            frmHomePage home = new frmHomePage();
+            home.Show();
+            this.Hide();
 
         }
 
@@ -145,6 +146,42 @@ namespace PRG282_Proj
         {
             frmOurTeam us = new frmOurTeam();
             us.Show();
+        }
+
+        private void btnAddStudent_Click(object sender, EventArgs e)
+        {
+
+            frmAddStudent add = new frmAddStudent();
+            add.Show();
+            this.Hide();
+
+        }
+
+        private void btnViewAllStudents_Click(object sender, EventArgs e)
+        {
+
+            frmViewAllStudents view = new frmViewAllStudents();
+            view.Show();
+            this.Hide();
+
+        }
+
+        private void btnDeleteStudent_Click(object sender, EventArgs e)
+        {
+
+            frmDeleteStudent delete = new frmDeleteStudent();
+            delete.Show();
+            this.Hide();
+
+        }
+
+        private void btnSummaryReport_Click(object sender, EventArgs e)
+        {
+
+            frmSummaryReport sum = new frmSummaryReport();
+            sum.Show();
+            this.Hide();
+
         }
     }
 }

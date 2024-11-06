@@ -17,6 +17,11 @@ namespace PRG282_Proj
             InitializeComponent();
         }
 
+        private void frmOurTeam_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             frmJanaRademan Jan = new frmJanaRademan();
@@ -40,5 +45,13 @@ namespace PRG282_Proj
             frmArmandSnyman snyman = new frmArmandSnyman();
             snyman.Show();
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+            
+
+        }
+
     }
 }

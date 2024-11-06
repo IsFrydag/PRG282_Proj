@@ -16,8 +16,7 @@ namespace PRG282_Proj
         {
             InitializeComponent();
         }
-
-        private void Form1_Load(object sender, EventArgs e)
+        private void frmHomePage_Load(object sender, EventArgs e)
         {
 
         }
@@ -34,35 +33,10 @@ namespace PRG282_Proj
 
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
-          //  button1.FlatStyle = FlatStyle.Flat;
-         //   button1.FlatAppearance.BorderSize = 0;
 
             frmAddStudent frmAdd = new frmAddStudent();
-
             frmAdd.Show();
-
             this.Hide();
-
-        }
-
-
-        private void btnDeleteStudent_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnViewAllStudents_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnUpdateStudentInfo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSummaryReport_Click(object sender, EventArgs e)
-        {
 
         }
 
@@ -81,32 +55,51 @@ namespace PRG282_Proj
 
         }
 
-        private void frmHomePage_Load(object sender, EventArgs e)
-        {
-
-        }
+   
 
         private void btnUpdateStudentInfo_Click_1(object sender, EventArgs e)
         {
             frmUpdateStudent f2 = new frmUpdateStudent();
             f2.Show();
+            this.Hide();
         }
 
         private void btnViewAllStudents_Click_1(object sender, EventArgs e)
         {
             frmViewAllStudents f3 = new frmViewAllStudents();
             f3.Show();
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             frmOurTeam us = new frmOurTeam();
             us.Show();
+            this.Hide();
+        }
+
+        private void btnSummaryReport_Click_1(object sender, EventArgs e)
+        {
+
+            frmSummaryReport sum = new frmSummaryReport();
+            sum.Show();
+            this.Hide();
+
+        }
+
+        private void btnDeleteStudent_Click_1(object sender, EventArgs e)
+        {
+
+            frmDeleteStudent delete = new frmDeleteStudent();
+            delete.Show();
+            this.Hide();
+
         }
     }
 }

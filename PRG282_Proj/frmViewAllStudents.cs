@@ -13,6 +13,8 @@ namespace PRG282_Proj
 {
     public partial class frmViewAllStudents : Form
     {
+
+        string filePath = "students.txt";
         public frmViewAllStudents()
         {
             InitializeComponent();
@@ -31,7 +33,7 @@ namespace PRG282_Proj
 
         private void btnViewAllStudents_Click(object sender, EventArgs e)
         {
-            string[] lines = File.ReadAllLines(@"students.txt");
+            string[] lines = File.ReadAllLines(filePath);
             string[] values;
 
             for(int i=0; i<lines.Length; i++)
@@ -57,6 +59,42 @@ namespace PRG282_Proj
         {
             frmOurTeam us = new frmOurTeam();
             us.Show();
+        }
+
+        private void btnAddStudent_Click(object sender, EventArgs e)
+        {
+
+            frmAddStudent add = new frmAddStudent();
+            add.Show();
+            this.Hide();
+
+        }
+
+        private void btnUpdateStudentInfo_Click(object sender, EventArgs e)
+        {
+
+            frmUpdateStudent up = new frmUpdateStudent();
+            up.Show();
+            this.Hide();
+
+        }
+
+        private void btnDeleteStudent_Click(object sender, EventArgs e)
+        {
+
+            frmDeleteStudent delete = new frmDeleteStudent();
+            delete.Show();
+            this.Hide();
+
+        }
+
+        private void btnSummaryReport_Click(object sender, EventArgs e)
+        {
+
+            frmSummaryReport summary = new frmSummaryReport();
+            summary.Show();
+            this.Hide();
+
         }
     }
 }
