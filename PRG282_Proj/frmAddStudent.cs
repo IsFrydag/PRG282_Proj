@@ -78,7 +78,7 @@ namespace PRG282_Proj
 
             Student student = new Student(studentID, studentName, studentAge, studentCourse);
 
-            if(txtStudentID.Text.Length != 13)
+            if(txtStudentID.Text.Length != 6)
             {
 
                 MessageBox.Show("Student ID must be exactly 13 digits long.");

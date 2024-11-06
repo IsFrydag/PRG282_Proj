@@ -35,10 +35,10 @@
             this.btnViewAllStudents = new System.Windows.Forms.Button();
             this.btnAddStudent = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,9 +52,9 @@
             this.btnSummaryReport.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnSummaryReport.Image = ((System.Drawing.Image)(resources.GetObject("btnSummaryReport.Image")));
             this.btnSummaryReport.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSummaryReport.Location = new System.Drawing.Point(0, 366);
+            this.btnSummaryReport.Location = new System.Drawing.Point(0, 357);
             this.btnSummaryReport.Name = "btnSummaryReport";
-            this.btnSummaryReport.Size = new System.Drawing.Size(208, 63);
+            this.btnSummaryReport.Size = new System.Drawing.Size(208, 72);
             this.btnSummaryReport.TabIndex = 19;
             this.btnSummaryReport.Text = "Summary";
             this.btnSummaryReport.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -88,7 +88,7 @@
             this.btnUpdateStudentInfo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnUpdateStudentInfo.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdateStudentInfo.Image")));
             this.btnUpdateStudentInfo.Location = new System.Drawing.Point(0, 219);
-            this.btnUpdateStudentInfo.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.btnUpdateStudentInfo.Margin = new System.Windows.Forms.Padding(0);
             this.btnUpdateStudentInfo.Name = "btnUpdateStudentInfo";
             this.btnUpdateStudentInfo.Size = new System.Drawing.Size(208, 66);
             this.btnUpdateStudentInfo.TabIndex = 17;
@@ -108,9 +108,9 @@
             this.btnViewAllStudents.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnViewAllStudents.Image = ((System.Drawing.Image)(resources.GetObject("btnViewAllStudents.Image")));
             this.btnViewAllStudents.Location = new System.Drawing.Point(0, 144);
-            this.btnViewAllStudents.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.btnViewAllStudents.Margin = new System.Windows.Forms.Padding(0);
             this.btnViewAllStudents.Name = "btnViewAllStudents";
-            this.btnViewAllStudents.Size = new System.Drawing.Size(208, 65);
+            this.btnViewAllStudents.Size = new System.Drawing.Size(208, 75);
             this.btnViewAllStudents.TabIndex = 16;
             this.btnViewAllStudents.Text = "View All Students";
             this.btnViewAllStudents.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -146,10 +146,20 @@
             this.panel1.Controls.Add(this.btnUpdateStudentInfo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(208, 489);
             this.panel1.TabIndex = 22;
+            // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(208, 72);
+            this.panel3.TabIndex = 24;
             // 
             // button1
             // 
@@ -158,9 +168,9 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(0, 432);
+            this.button1.Location = new System.Drawing.Point(0, 427);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(208, 54);
+            this.button1.Size = new System.Drawing.Size(208, 59);
             this.button1.TabIndex = 23;
             this.button1.Text = "Settings";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -189,16 +199,6 @@
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(208, 72);
-            this.panel3.TabIndex = 24;
             // 
             // frmHomePage
             // 
