@@ -56,7 +56,7 @@
             this.lblSID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(92)))), ((int)(((byte)(127)))));
             this.lblSID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblSID.Location = new System.Drawing.Point(305, 138);
+            this.lblSID.Location = new System.Drawing.Point(246, 125);
             this.lblSID.Name = "lblSID";
             this.lblSID.Size = new System.Drawing.Size(23, 16);
             this.lblSID.TabIndex = 1;
@@ -68,7 +68,7 @@
             this.lblSName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(92)))), ((int)(((byte)(127)))));
             this.lblSName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblSName.Location = new System.Drawing.Point(281, 173);
+            this.lblSName.Location = new System.Drawing.Point(246, 169);
             this.lblSName.Name = "lblSName";
             this.lblSName.Size = new System.Drawing.Size(47, 16);
             this.lblSName.TabIndex = 2;
@@ -80,7 +80,7 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(92)))), ((int)(((byte)(127)))));
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(290, 207);
+            this.label4.Location = new System.Drawing.Point(246, 207);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 16);
             this.label4.TabIndex = 3;
@@ -92,7 +92,7 @@
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(92)))), ((int)(((byte)(127)))));
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(272, 241);
+            this.label5.Location = new System.Drawing.Point(246, 246);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 16);
             this.label5.TabIndex = 4;
@@ -100,7 +100,7 @@
             // 
             // txtStudentID
             // 
-            this.txtStudentID.Location = new System.Drawing.Point(350, 134);
+            this.txtStudentID.Location = new System.Drawing.Point(350, 121);
             this.txtStudentID.Name = "txtStudentID";
             this.txtStudentID.Size = new System.Drawing.Size(159, 20);
             this.txtStudentID.TabIndex = 5;
@@ -108,7 +108,7 @@
             // 
             // txtStudentName
             // 
-            this.txtStudentName.Location = new System.Drawing.Point(350, 169);
+            this.txtStudentName.Location = new System.Drawing.Point(350, 165);
             this.txtStudentName.Name = "txtStudentName";
             this.txtStudentName.Size = new System.Drawing.Size(159, 20);
             this.txtStudentName.TabIndex = 6;
@@ -116,7 +116,7 @@
             // 
             // txtStudentAge
             // 
-            this.txtStudentAge.Location = new System.Drawing.Point(350, 207);
+            this.txtStudentAge.Location = new System.Drawing.Point(350, 203);
             this.txtStudentAge.Name = "txtStudentAge";
             this.txtStudentAge.Size = new System.Drawing.Size(159, 20);
             this.txtStudentAge.TabIndex = 7;
@@ -143,7 +143,7 @@
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnRegister.Location = new System.Drawing.Point(441, 337);
+            this.btnRegister.Location = new System.Drawing.Point(336, 316);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(68, 31);
             this.btnRegister.TabIndex = 9;
@@ -155,13 +155,14 @@
             // 
             this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(142)))), ((int)(((byte)(163)))));
             this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(142)))), ((int)(((byte)(163)))));
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
             this.btnBack.Location = new System.Drawing.Point(0, 0);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(135, 64);
+            this.btnBack.Size = new System.Drawing.Size(166, 64);
             this.btnBack.TabIndex = 10;
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click_1);
@@ -178,19 +179,21 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(135, 393);
+            this.panel1.Size = new System.Drawing.Size(166, 393);
             this.panel1.TabIndex = 11;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(142)))), ((int)(((byte)(163)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(142)))), ((int)(((byte)(163)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button1.Location = new System.Drawing.Point(0, 328);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(135, 63);
+            this.button1.Size = new System.Drawing.Size(166, 63);
             this.button1.TabIndex = 26;
             this.button1.Text = "Settings";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -202,6 +205,7 @@
             this.btnSummaryReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(142)))), ((int)(((byte)(163)))));
             this.btnSummaryReport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnSummaryReport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSummaryReport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(142)))), ((int)(((byte)(163)))));
             this.btnSummaryReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSummaryReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSummaryReport.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -209,7 +213,7 @@
             this.btnSummaryReport.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnSummaryReport.Location = new System.Drawing.Point(0, 260);
             this.btnSummaryReport.Name = "btnSummaryReport";
-            this.btnSummaryReport.Size = new System.Drawing.Size(135, 71);
+            this.btnSummaryReport.Size = new System.Drawing.Size(166, 71);
             this.btnSummaryReport.TabIndex = 26;
             this.btnSummaryReport.Text = "Summary";
             this.btnSummaryReport.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -220,13 +224,14 @@
             this.btnDeleteStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(142)))), ((int)(((byte)(163)))));
             this.btnDeleteStudent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnDeleteStudent.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeleteStudent.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(142)))), ((int)(((byte)(163)))));
             this.btnDeleteStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteStudent.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnDeleteStudent.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteStudent.Image")));
             this.btnDeleteStudent.Location = new System.Drawing.Point(0, 190);
             this.btnDeleteStudent.Name = "btnDeleteStudent";
-            this.btnDeleteStudent.Size = new System.Drawing.Size(135, 72);
+            this.btnDeleteStudent.Size = new System.Drawing.Size(166, 72);
             this.btnDeleteStudent.TabIndex = 26;
             this.btnDeleteStudent.Text = "Remove Student";
             this.btnDeleteStudent.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -238,6 +243,7 @@
             this.btnUpdateStudentInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(142)))), ((int)(((byte)(163)))));
             this.btnUpdateStudentInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnUpdateStudentInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdateStudentInfo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(142)))), ((int)(((byte)(163)))));
             this.btnUpdateStudentInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateStudentInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateStudentInfo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -245,7 +251,7 @@
             this.btnUpdateStudentInfo.Location = new System.Drawing.Point(0, 125);
             this.btnUpdateStudentInfo.Margin = new System.Windows.Forms.Padding(0);
             this.btnUpdateStudentInfo.Name = "btnUpdateStudentInfo";
-            this.btnUpdateStudentInfo.Size = new System.Drawing.Size(135, 66);
+            this.btnUpdateStudentInfo.Size = new System.Drawing.Size(166, 66);
             this.btnUpdateStudentInfo.TabIndex = 27;
             this.btnUpdateStudentInfo.Text = "Update Student";
             this.btnUpdateStudentInfo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -257,6 +263,7 @@
             this.btnViewAllStudents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(142)))), ((int)(((byte)(163)))));
             this.btnViewAllStudents.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnViewAllStudents.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnViewAllStudents.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(142)))), ((int)(((byte)(163)))));
             this.btnViewAllStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewAllStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewAllStudents.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -264,7 +271,7 @@
             this.btnViewAllStudents.Location = new System.Drawing.Point(0, 60);
             this.btnViewAllStudents.Margin = new System.Windows.Forms.Padding(0);
             this.btnViewAllStudents.Name = "btnViewAllStudents";
-            this.btnViewAllStudents.Size = new System.Drawing.Size(135, 65);
+            this.btnViewAllStudents.Size = new System.Drawing.Size(166, 65);
             this.btnViewAllStudents.TabIndex = 26;
             this.btnViewAllStudents.Text = "View All Students";
             this.btnViewAllStudents.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -276,7 +283,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(471, 12);
+            this.button2.Location = new System.Drawing.Point(552, 10);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(38, 35);
             this.button2.TabIndex = 25;
@@ -289,7 +296,7 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(92)))), ((int)(((byte)(127)))));
             this.label1.Font = new System.Drawing.Font("Lucida Bright", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(257, 73);
+            this.label1.Location = new System.Drawing.Point(243, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(252, 33);
             this.label1.TabIndex = 0;
@@ -301,7 +308,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(92)))), ((int)(((byte)(127)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(521, 393);
+            this.ClientSize = new System.Drawing.Size(602, 393);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnRegister);
