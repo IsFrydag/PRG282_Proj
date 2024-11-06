@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDeleteStudent));
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.btnDeleteStudent = new System.Windows.Forms.Button();
+            this.txtEnterStudentID = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -43,7 +43,8 @@
             this.btnViewAllStudents = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnAddStudent = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnShowAllRecords = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -60,51 +61,53 @@
             this.label3.Text = "Delete a Student";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // dataGridView1
+            // dataGridView
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(195, 108);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(454, 241);
-            this.dataGridView1.TabIndex = 22;
+            this.dataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(195, 108);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.Size = new System.Drawing.Size(454, 241);
+            this.dataGridView.TabIndex = 22;
             // 
-            // button1
+            // btnDeleteStudent
             // 
-            this.button1.BackColor = System.Drawing.Color.CadetBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(541, 355);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 28);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Delete Student";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnDeleteStudent.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnDeleteStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteStudent.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnDeleteStudent.Location = new System.Drawing.Point(463, 355);
+            this.btnDeleteStudent.Name = "btnDeleteStudent";
+            this.btnDeleteStudent.Size = new System.Drawing.Size(108, 28);
+            this.btnDeleteStudent.TabIndex = 23;
+            this.btnDeleteStudent.Text = "Delete Student";
+            this.btnDeleteStudent.UseVisualStyleBackColor = false;
+            this.btnDeleteStudent.Click += new System.EventHandler(this.btnDeleteStudent_Click);
             // 
-            // textBox1
+            // txtEnterStudentID
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox1.Location = new System.Drawing.Point(242, 73);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(316, 28);
-            this.textBox1.TabIndex = 24;
-            this.textBox1.Text = "Enter Student ID...";
+            this.txtEnterStudentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEnterStudentID.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtEnterStudentID.Location = new System.Drawing.Point(242, 73);
+            this.txtEnterStudentID.Multiline = true;
+            this.txtEnterStudentID.Name = "txtEnterStudentID";
+            this.txtEnterStudentID.Size = new System.Drawing.Size(316, 28);
+            this.txtEnterStudentID.TabIndex = 24;
+            this.txtEnterStudentID.Text = "Enter Student ID...";
             // 
-            // button2
+            // btnSearch
             // 
-            this.button2.BackColor = System.Drawing.Color.CadetBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(564, 74);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(62, 28);
-            this.button2.TabIndex = 25;
-            this.button2.Text = "Search";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnSearch.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSearch.Location = new System.Drawing.Point(564, 74);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(62, 28);
+            this.btnSearch.TabIndex = 25;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // pictureBox1
             // 
@@ -254,6 +257,20 @@
             this.btnAddStudent.UseVisualStyleBackColor = false;
             this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
             // 
+            // btnShowAllRecords
+            // 
+            this.btnShowAllRecords.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnShowAllRecords.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowAllRecords.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowAllRecords.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnShowAllRecords.Location = new System.Drawing.Point(264, 355);
+            this.btnShowAllRecords.Name = "btnShowAllRecords";
+            this.btnShowAllRecords.Size = new System.Drawing.Size(143, 28);
+            this.btnShowAllRecords.TabIndex = 30;
+            this.btnShowAllRecords.Text = "Show All Records";
+            this.btnShowAllRecords.UseVisualStyleBackColor = false;
+            this.btnShowAllRecords.Click += new System.EventHandler(this.btnShowAllRecords_Click);
+            // 
             // frmDeleteStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -261,21 +278,23 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(92)))), ((int)(((byte)(127)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(687, 392);
+            this.Controls.Add(this.btnShowAllRecords);
             this.Controls.Add(this.btnAddStudent);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.txtEnterStudentID);
+            this.Controls.Add(this.btnDeleteStudent);
+            this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(687, 392);
             this.MinimumSize = new System.Drawing.Size(687, 392);
             this.Name = "frmDeleteStudent";
             this.Text = "frmDeleteStudent";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmDeleteStudent_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -285,10 +304,10 @@
 
         #endregion
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.Button btnDeleteStudent;
+        private System.Windows.Forms.TextBox txtEnterStudentID;
+        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel1;
@@ -298,5 +317,6 @@
         private System.Windows.Forms.Button btnUpdateStudentInfo;
         private System.Windows.Forms.Button btnSummaryReport;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnShowAllRecords;
     }
 }
