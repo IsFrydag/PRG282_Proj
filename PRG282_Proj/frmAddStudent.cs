@@ -83,7 +83,7 @@ namespace PRG282_Proj
             if(txtStudentID.Text.Length != 6)
             {
 
-                MessageBox.Show("Student ID must be exactly 13 digits long.");
+                MessageBox.Show("Student ID must be exactly 6 digits long.");
                 return;
 
             }
