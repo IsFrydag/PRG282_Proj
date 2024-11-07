@@ -40,7 +40,7 @@
             this.btnUpdateStudentInfo = new System.Windows.Forms.Button();
             this.btnAddStudent = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.exitBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -51,7 +51,7 @@
             this.btnViewAllStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewAllStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewAllStudents.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnViewAllStudents.Location = new System.Drawing.Point(672, 344);
+            this.btnViewAllStudents.Location = new System.Drawing.Point(608, 344);
             this.btnViewAllStudents.Margin = new System.Windows.Forms.Padding(2);
             this.btnViewAllStudents.Name = "btnViewAllStudents";
             this.btnViewAllStudents.Size = new System.Drawing.Size(68, 29);
@@ -99,7 +99,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(568, 236);
+            this.dataGridView1.Size = new System.Drawing.Size(443, 236);
             this.dataGridView1.TabIndex = 3;
             // 
             // panel1
@@ -231,18 +231,19 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // exitBtn
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(142)))), ((int)(((byte)(163)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(710, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(38, 35);
-            this.button3.TabIndex = 26;
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = false;
+            this.exitBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(142)))), ((int)(((byte)(163)))));
+            this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitBtn.Image = ((System.Drawing.Image)(resources.GetObject("exitBtn.Image")));
+            this.exitBtn.Location = new System.Drawing.Point(638, 7);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(38, 35);
+            this.exitBtn.TabIndex = 26;
+            this.exitBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.exitBtn.UseVisualStyleBackColor = false;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
             // frmViewAllStudents
             // 
@@ -250,8 +251,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(760, 399);
-            this.Controls.Add(this.button3);
+            this.ClientSize = new System.Drawing.Size(686, 399);
+            this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
@@ -259,6 +260,8 @@
             this.Controls.Add(this.btnViewAllStudents);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximumSize = new System.Drawing.Size(686, 399);
+            this.MinimumSize = new System.Drawing.Size(686, 399);
             this.Name = "frmViewAllStudents";
             this.Text = "frmViewAllStudents";
             this.Load += new System.EventHandler(this.frmViewAllStudents_Load);
@@ -282,6 +285,6 @@
         private System.Windows.Forms.Button btnSummaryReport;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button exitBtn;
     }
 }

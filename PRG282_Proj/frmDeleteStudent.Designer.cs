@@ -35,7 +35,7 @@
             this.txtEnterStudentID = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.exitBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.btnSummaryReport = new System.Windows.Forms.Button();
@@ -65,9 +65,9 @@
             // 
             this.dataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(195, 108);
+            this.dataGridView.Location = new System.Drawing.Point(198, 108);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(454, 241);
+            this.dataGridView.Size = new System.Drawing.Size(441, 241);
             this.dataGridView.TabIndex = 22;
             // 
             // btnDeleteStudent
@@ -118,18 +118,19 @@
             this.pictureBox1.TabIndex = 26;
             this.pictureBox1.TabStop = false;
             // 
-            // button3
+            // exitBtn
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(142)))), ((int)(((byte)(163)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(634, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(38, 35);
-            this.button3.TabIndex = 27;
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = false;
+            this.exitBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(142)))), ((int)(((byte)(163)))));
+            this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitBtn.Image = ((System.Drawing.Image)(resources.GetObject("exitBtn.Image")));
+            this.exitBtn.Location = new System.Drawing.Point(634, 12);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(38, 35);
+            this.exitBtn.TabIndex = 27;
+            this.exitBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.exitBtn.UseVisualStyleBackColor = false;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
             // panel1
             // 
@@ -281,7 +282,7 @@
             this.Controls.Add(this.btnShowAllRecords);
             this.Controls.Add(this.btnAddStudent);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtEnterStudentID);
@@ -309,7 +310,7 @@
         private System.Windows.Forms.TextBox txtEnterStudentID;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnAddStudent;

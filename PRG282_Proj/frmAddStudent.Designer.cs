@@ -45,7 +45,7 @@
             this.btnDeleteStudent = new System.Windows.Forms.Button();
             this.btnUpdateStudentInfo = new System.Windows.Forms.Button();
             this.btnViewAllStudents = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.exitBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -191,9 +191,9 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(0, 328);
+            this.button1.Location = new System.Drawing.Point(0, 337);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(166, 63);
+            this.button1.Size = new System.Drawing.Size(166, 56);
             this.button1.TabIndex = 26;
             this.button1.Text = "Settings";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -281,18 +281,19 @@
             this.btnViewAllStudents.UseVisualStyleBackColor = false;
             this.btnViewAllStudents.Click += new System.EventHandler(this.btnViewAllStudents_Click);
             // 
-            // button2
+            // exitBtn
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(142)))), ((int)(((byte)(163)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(552, 10);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(38, 35);
-            this.button2.TabIndex = 25;
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = false;
+            this.exitBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(142)))), ((int)(((byte)(163)))));
+            this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitBtn.Image = ((System.Drawing.Image)(resources.GetObject("exitBtn.Image")));
+            this.exitBtn.Location = new System.Drawing.Point(552, 10);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(38, 35);
+            this.exitBtn.TabIndex = 25;
+            this.exitBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.exitBtn.UseVisualStyleBackColor = false;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
             // label1
             // 
@@ -313,7 +314,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(92)))), ((int)(((byte)(127)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(602, 393);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.cbStudentCourse);
@@ -326,6 +327,8 @@
             this.Controls.Add(this.lblSID);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(602, 393);
+            this.MinimumSize = new System.Drawing.Size(602, 393);
             this.Name = "frmAddStudent";
             this.Text = "frmAddStudent";
             this.Load += new System.EventHandler(this.frmAddStudent_Load);
@@ -347,7 +350,7 @@
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnViewAllStudents;
         private System.Windows.Forms.Button btnUpdateStudentInfo;

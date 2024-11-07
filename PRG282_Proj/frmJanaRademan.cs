@@ -21,5 +21,12 @@ namespace PRG282_Proj
         {
             Application.Exit();
         }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            thisIsUs us = new thisIsUs();
+            us.Show();
+            this.Hide();
+        }
     }
 }

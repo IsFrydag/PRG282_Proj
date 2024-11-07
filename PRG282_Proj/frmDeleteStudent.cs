@@ -33,7 +33,7 @@ namespace PRG282_Proj
 
         private void button4_Click(object sender, EventArgs e)
         {
-            frmOurTeam us = new frmOurTeam();
+           thisIsUs us = new thisIsUs();
             us.Show();
             this.Hide();
         }
@@ -196,6 +196,11 @@ namespace PRG282_Proj
         private void btnShowAllRecords_Click(object sender, EventArgs e)
         {
             dataGridView.DataSource = dt;
+        }
+
+        private void exitBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
