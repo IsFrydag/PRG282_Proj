@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSummaryReport));
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblTotalNumberOfStudents = new System.Windows.Forms.Label();
+            this.lblAverageAgeOfStudents = new System.Windows.Forms.Label();
+            this.btnSaveSummary = new System.Windows.Forms.Button();
+            this.txtTotalNumberOfStudents = new System.Windows.Forms.TextBox();
+            this.txtAverageAgeOfStudents = new System.Windows.Forms.TextBox();
+            this.lblSummaryReport = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.btnUpdateStudentInfo = new System.Windows.Forms.Button();
@@ -46,61 +46,64 @@
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // lblTotalNumberOfStudents
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(341, 204);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Total Number of Students";
+            this.lblTotalNumberOfStudents.AutoSize = true;
+            this.lblTotalNumberOfStudents.Location = new System.Drawing.Point(341, 204);
+            this.lblTotalNumberOfStudents.Name = "lblTotalNumberOfStudents";
+            this.lblTotalNumberOfStudents.Size = new System.Drawing.Size(128, 13);
+            this.lblTotalNumberOfStudents.TabIndex = 0;
+            this.lblTotalNumberOfStudents.Text = "Total Number of Students";
             // 
-            // label2
+            // lblAverageAgeOfStudents
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(353, 250);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Average Age of Students";
+            this.lblAverageAgeOfStudents.AutoSize = true;
+            this.lblAverageAgeOfStudents.Location = new System.Drawing.Point(353, 250);
+            this.lblAverageAgeOfStudents.Name = "lblAverageAgeOfStudents";
+            this.lblAverageAgeOfStudents.Size = new System.Drawing.Size(126, 13);
+            this.lblAverageAgeOfStudents.TabIndex = 1;
+            this.lblAverageAgeOfStudents.Text = "Average Age of Students";
             // 
-            // button1
+            // btnSaveSummary
             // 
-            this.button1.BackColor = System.Drawing.Color.CadetBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(502, 362);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 27);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Save Summary";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSaveSummary.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnSaveSummary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveSummary.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSaveSummary.Location = new System.Drawing.Point(502, 362);
+            this.btnSaveSummary.Name = "btnSaveSummary";
+            this.btnSaveSummary.Size = new System.Drawing.Size(108, 27);
+            this.btnSaveSummary.TabIndex = 2;
+            this.btnSaveSummary.Text = "Save Summary";
+            this.btnSaveSummary.UseVisualStyleBackColor = false;
+            this.btnSaveSummary.Click += new System.EventHandler(this.btnSaveSummary_Click);
             // 
-            // textBox1
+            // txtTotalNumberOfStudents
             // 
-            this.textBox1.Location = new System.Drawing.Point(502, 197);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(108, 20);
-            this.textBox1.TabIndex = 3;
+            this.txtTotalNumberOfStudents.Location = new System.Drawing.Point(502, 197);
+            this.txtTotalNumberOfStudents.Name = "txtTotalNumberOfStudents";
+            this.txtTotalNumberOfStudents.Size = new System.Drawing.Size(108, 20);
+            this.txtTotalNumberOfStudents.TabIndex = 3;
+            this.txtTotalNumberOfStudents.TextChanged += new System.EventHandler(this.txtTotalNumberOfStudents_TextChanged);
             // 
-            // textBox2
+            // txtAverageAgeOfStudents
             // 
-            this.textBox2.Location = new System.Drawing.Point(502, 243);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(108, 20);
-            this.textBox2.TabIndex = 4;
+            this.txtAverageAgeOfStudents.Location = new System.Drawing.Point(502, 243);
+            this.txtAverageAgeOfStudents.Name = "txtAverageAgeOfStudents";
+            this.txtAverageAgeOfStudents.Size = new System.Drawing.Size(108, 20);
+            this.txtAverageAgeOfStudents.TabIndex = 4;
+            this.txtAverageAgeOfStudents.TextChanged += new System.EventHandler(this.txtAverageAgeOfStudents_TextChanged);
             // 
-            // label3
+            // lblSummaryReport
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(92)))), ((int)(((byte)(127)))));
-            this.label3.Font = new System.Drawing.Font("Lucida Bright", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(350, 149);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(260, 33);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "Summary Report";
+            this.lblSummaryReport.AutoSize = true;
+            this.lblSummaryReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(92)))), ((int)(((byte)(127)))));
+            this.lblSummaryReport.Font = new System.Drawing.Font("Lucida Bright", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSummaryReport.Location = new System.Drawing.Point(350, 149);
+            this.lblSummaryReport.Name = "lblSummaryReport";
+            this.lblSummaryReport.Size = new System.Drawing.Size(260, 33);
+            this.lblSummaryReport.TabIndex = 22;
+            this.lblSummaryReport.Text = "Summary Report";
             // 
             // panel1
             // 
@@ -251,12 +254,12 @@
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.btnDeleteStudent);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblSummaryReport);
+            this.Controls.Add(this.txtAverageAgeOfStudents);
+            this.Controls.Add(this.txtTotalNumberOfStudents);
+            this.Controls.Add(this.btnSaveSummary);
+            this.Controls.Add(this.lblAverageAgeOfStudents);
+            this.Controls.Add(this.lblTotalNumberOfStudents);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(622, 401);
@@ -272,12 +275,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTotalNumberOfStudents;
+        private System.Windows.Forms.Label lblAverageAgeOfStudents;
+        private System.Windows.Forms.Button btnSaveSummary;
+        private System.Windows.Forms.TextBox txtTotalNumberOfStudents;
+        private System.Windows.Forms.TextBox txtAverageAgeOfStudents;
+        private System.Windows.Forms.Label lblSummaryReport;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnAddStudent;

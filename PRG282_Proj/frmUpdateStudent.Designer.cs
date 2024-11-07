@@ -385,6 +385,7 @@
             this.MinimumSize = new System.Drawing.Size(629, 410);
             this.Name = "frmUpdateStudent";
             this.Text = "frmUpdateStudent";
+            this.Load += new System.EventHandler(this.frmUpdateStudent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);

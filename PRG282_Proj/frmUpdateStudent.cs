@@ -189,5 +189,10 @@ namespace PRG282_Proj
         {
             Application.Exit();
         }
+
+        private void frmUpdateStudent_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

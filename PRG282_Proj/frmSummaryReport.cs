@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,9 +28,47 @@ namespace PRG282_Proj
         private void frmSummaryReport_Load(object sender, EventArgs e)
         {
 
-            frmSummaryReport sum = new frmSummaryReport();
-            sum.Show();
-            this.Hide();
+
+            //
+            string fileName = "students.txt";
+
+            if (File.Exists(fileName))
+            {
+                try
+                {
+                    string[] lines = File.ReadAllLines(fileName);
+                    int totalStudents = lines.Length;
+                    int totalAge = 0;
+
+                    for (int i = 0; i < lines.Length; i++)
+                    {
+                        string line = lines[i];
+                        string[] parts = line.Split(',');
+
+                        if (parts.Length > 1)
+                        {
+                            string ageString = parts[0].Trim();
+                            totalAge += int.Parse(ageString);
+                        }
+                    }
+
+                    double averageAge = (double)totalAge / totalStudents;
+
+                    txtTotalNumberOfStudents.Text = totalStudents.ToString();
+                    txtAverageAgeOfStudents.Text = averageAge.ToString(); 
+
+
+                }
+                catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+            }
+
+            else
+            {
+                MessageBox.Show($"{fileName} not found.");
+            }
 
         }
 
@@ -71,6 +111,36 @@ namespace PRG282_Proj
         private void exitBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void txtTotalNumberOfStudents_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAverageAgeOfStudents_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSaveSummary_Click(object sender, EventArgs e)
+        {
+            string saveSummary = "summary.txt";
+
+            string totalStudents = txtTotalNumberOfStudents.Text;
+            string averageAge = txtAverageAgeOfStudents.Text;
+            
+            string content = totalStudents + ", " + averageAge;
+
+            try
+            {
+                File.WriteAllText(saveSummary, content);
+                MessageBox.Show("Summary saved to " + saveSummary);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
