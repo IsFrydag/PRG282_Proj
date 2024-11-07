@@ -16,8 +16,8 @@ namespace PRG282_Proj
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new frmHomePage());
-            Application.Run(new frmDeleteStudent());
+            Application.Run(new frmHomePage());
+
         }
     }
 }
