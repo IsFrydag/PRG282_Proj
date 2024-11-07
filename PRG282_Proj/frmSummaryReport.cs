@@ -19,7 +19,7 @@ namespace PRG282_Proj
 
         private void button2_Click(object sender, EventArgs e)
         {
-            frmOurTeam us = new frmOurTeam();
+           thisIsUs us = new thisIsUs();
             us.Show();
         }
 
@@ -66,6 +66,11 @@ namespace PRG282_Proj
             home.Show();
             this.Hide();
 
+        }
+
+        private void exitBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -16,5 +16,17 @@ namespace PRG282_Proj
         {
             InitializeComponent();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            thisIsUs us = new thisIsUs();
+            us.Show();
+            this.Hide();
+        }
     }
 }
