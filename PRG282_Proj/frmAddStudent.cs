@@ -16,7 +16,7 @@ namespace PRG282_Proj
 {
     public partial class frmAddStudent : Form
     {
-        static string fileName = "students.txt";
+        public string fileName = "students.txt";
 
         int PW;
         bool Hided;
@@ -39,6 +39,18 @@ namespace PRG282_Proj
         public static List<string> Read(string fileName)
         {
             List<string> lines = new List<string>();
+            //added
+            if (!File.Exists(fileName))
+            {
+                using (FileStream fs = File.Create(fileName)) {
+                    using (StreamWriter writer = new StreamWriter(fs))
+                    {
+                        writer.WriteLine("Student Registered");
+                    }
+                    MessageBox.Show("File created");
+                    return lines;
+                }
+            }
 
             using (StreamReader sr = new StreamReader(fileName))
             {
@@ -74,8 +86,29 @@ namespace PRG282_Proj
 
 
         private void btnRegister_Click(object sender, EventArgs e)
-        {          
+        {
+            //once register button is clicked check if the file first exists but create one if it does not exist
+            if (!File.Exists(fileName))
+            {
+                try
+                {
+                    using (FileStream fs = File.Create(fileName))
+                    {
 
+                        using (StreamWriter writer = new StreamWriter(fs))
+                        {
+                            writer.WriteLine("Students Registered:");
+                        }
+                    }
+                    MessageBox.Show("File Created");
+
+
+                }
+                catch (Exception ex){
+                    MessageBox.Show("Error" + ex.Message);
+                    return;
+                }
+            }
             string studentID = txtStudentID.Text;
             string studentName = txtStudentName.Text;
             int studentAge = Convert.ToInt32(txtStudentAge.Text);

@@ -43,9 +43,10 @@
             this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.backBtn.Location = new System.Drawing.Point(513, 408);
+            this.backBtn.Location = new System.Drawing.Point(684, 502);
+            this.backBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(77, 30);
+            this.backBtn.Size = new System.Drawing.Size(103, 37);
             this.backBtn.TabIndex = 29;
             this.backBtn.Text = "Back";
             this.backBtn.UseVisualStyleBackColor = false;
@@ -58,9 +59,10 @@
             this.exitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.exitBtn.Image = ((System.Drawing.Image)(resources.GetObject("exitBtn.Image")));
-            this.exitBtn.Location = new System.Drawing.Point(552, 12);
+            this.exitBtn.Location = new System.Drawing.Point(736, 15);
+            this.exitBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(38, 35);
+            this.exitBtn.Size = new System.Drawing.Size(51, 43);
             this.exitBtn.TabIndex = 30;
             this.exitBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.exitBtn.UseVisualStyleBackColor = false;
@@ -72,18 +74,20 @@
             this.label1.BackColor = System.Drawing.Color.Lavender;
             this.label1.Font = new System.Drawing.Font("Lucida Bright", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(158, 49);
+            this.label1.Location = new System.Drawing.Point(211, 60);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(339, 33);
+            this.label1.Size = new System.Drawing.Size(433, 42);
             this.label1.TabIndex = 31;
             this.label1.Text = "Who is Heiner Freitag?";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(56, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(75, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 85);
+            this.pictureBox1.Size = new System.Drawing.Size(107, 105);
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
             // 
@@ -91,28 +95,31 @@
             // 
             this.lblInfo.AutoSize = true;
             this.lblInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfo.Location = new System.Drawing.Point(51, 129);
+            this.lblInfo.Location = new System.Drawing.Point(68, 159);
+            this.lblInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInfo.Name = "lblInfo";
-            this.lblInfo.Size = new System.Drawing.Size(461, 250);
+            this.lblInfo.Size = new System.Drawing.Size(568, 310);
             this.lblInfo.TabIndex = 33;
             this.lblInfo.Text = resources.GetString("lblInfo.Text");
             this.lblInfo.Click += new System.EventHandler(this.lblInfo_Click);
             // 
             // frmHeinerFreitag
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(602, 450);
+            this.ClientSize = new System.Drawing.Size(803, 554);
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.backBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(602, 450);
-            this.MinimumSize = new System.Drawing.Size(602, 450);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximumSize = new System.Drawing.Size(803, 554);
+            this.MinimumSize = new System.Drawing.Size(803, 554);
             this.Name = "frmHeinerFreitag";
             this.Text = "frmHeinerFreitag";
+            this.Load += new System.EventHandler(this.frmHeinerFreitag_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

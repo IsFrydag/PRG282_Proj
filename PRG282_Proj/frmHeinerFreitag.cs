@@ -33,5 +33,10 @@ namespace PRG282_Proj
         {
 
         }
+
+        private void frmHeinerFreitag_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
