@@ -28,5 +28,10 @@ namespace PRG282_Proj
             us.Show();
             this.Hide();
         }
+
+        private void lblInfo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
