@@ -13,12 +13,18 @@ namespace PRG282_Proj
 {
     public partial class frmDeleteStudent : Form
     {
+
+        int PW;
+        bool Hided;
+
         public frmDeleteStudent()
         {
             InitializeComponent();
+            PW = Spanel.Width;
+            Hided = false;
         }
 
-        //
+        
         DataTable dt = new DataTable();
 
         private void label2_Click(object sender, EventArgs e)
@@ -201,6 +207,37 @@ namespace PRG282_Proj
         private void exitBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (Hided)
+            {
+                Spanel.Width = Spanel.Width + 20;
+                if (Spanel.Width >= PW)
+                {
+                    timer1.Stop();
+                    Hided = false;
+                    this.Refresh();
+                }
+            }
+            else
+            {
+                Spanel.Width = Spanel.Width - 20;
+                if (Spanel.Width <= 0)
+                {
+                    timer1.Stop();
+                    Hided = true;
+                    this.Refresh();
+                }
+            }
+        }
+
+        private void hideBtn_Click(object sender, EventArgs e)
+        {
+            if (Hided) hideBtn.Text = "";
+            else hideBtn.Text = "";
+            timer1.Start();
         }
     }
 }

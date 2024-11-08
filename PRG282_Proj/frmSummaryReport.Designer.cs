@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSummaryReport));
             this.lblTotalNumberOfStudents = new System.Windows.Forms.Label();
             this.lblAverageAgeOfStudents = new System.Windows.Forms.Label();
@@ -35,7 +36,7 @@
             this.txtTotalNumberOfStudents = new System.Windows.Forms.TextBox();
             this.txtAverageAgeOfStudents = new System.Windows.Forms.TextBox();
             this.lblSummaryReport = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.Spanel = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.btnUpdateStudentInfo = new System.Windows.Forms.Button();
             this.btnViewAllStudents = new System.Windows.Forms.Button();
@@ -43,13 +44,17 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.btnDeleteStudent = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.hidePanel = new System.Windows.Forms.Panel();
+            this.hideBtn = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.Spanel.SuspendLayout();
+            this.hidePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTotalNumberOfStudents
             // 
             this.lblTotalNumberOfStudents.AutoSize = true;
-            this.lblTotalNumberOfStudents.Location = new System.Drawing.Point(341, 204);
+            this.lblTotalNumberOfStudents.Location = new System.Drawing.Point(189, 178);
             this.lblTotalNumberOfStudents.Name = "lblTotalNumberOfStudents";
             this.lblTotalNumberOfStudents.Size = new System.Drawing.Size(128, 13);
             this.lblTotalNumberOfStudents.TabIndex = 0;
@@ -58,7 +63,7 @@
             // lblAverageAgeOfStudents
             // 
             this.lblAverageAgeOfStudents.AutoSize = true;
-            this.lblAverageAgeOfStudents.Location = new System.Drawing.Point(353, 250);
+            this.lblAverageAgeOfStudents.Location = new System.Drawing.Point(189, 250);
             this.lblAverageAgeOfStudents.Name = "lblAverageAgeOfStudents";
             this.lblAverageAgeOfStudents.Size = new System.Drawing.Size(126, 13);
             this.lblAverageAgeOfStudents.TabIndex = 1;
@@ -70,7 +75,7 @@
             this.btnSaveSummary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaveSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveSummary.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSaveSummary.Location = new System.Drawing.Point(502, 362);
+            this.btnSaveSummary.Location = new System.Drawing.Point(283, 344);
             this.btnSaveSummary.Name = "btnSaveSummary";
             this.btnSaveSummary.Size = new System.Drawing.Size(108, 27);
             this.btnSaveSummary.TabIndex = 2;
@@ -80,7 +85,7 @@
             // 
             // txtTotalNumberOfStudents
             // 
-            this.txtTotalNumberOfStudents.Location = new System.Drawing.Point(502, 197);
+            this.txtTotalNumberOfStudents.Location = new System.Drawing.Point(384, 175);
             this.txtTotalNumberOfStudents.Name = "txtTotalNumberOfStudents";
             this.txtTotalNumberOfStudents.Size = new System.Drawing.Size(108, 20);
             this.txtTotalNumberOfStudents.TabIndex = 3;
@@ -88,7 +93,7 @@
             // 
             // txtAverageAgeOfStudents
             // 
-            this.txtAverageAgeOfStudents.Location = new System.Drawing.Point(502, 243);
+            this.txtAverageAgeOfStudents.Location = new System.Drawing.Point(384, 247);
             this.txtAverageAgeOfStudents.Name = "txtAverageAgeOfStudents";
             this.txtAverageAgeOfStudents.Size = new System.Drawing.Size(108, 20);
             this.txtAverageAgeOfStudents.TabIndex = 4;
@@ -99,25 +104,26 @@
             this.lblSummaryReport.AutoSize = true;
             this.lblSummaryReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(92)))), ((int)(((byte)(127)))));
             this.lblSummaryReport.Font = new System.Drawing.Font("Lucida Bright", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSummaryReport.Location = new System.Drawing.Point(350, 149);
+            this.lblSummaryReport.Location = new System.Drawing.Point(186, 62);
             this.lblSummaryReport.Name = "lblSummaryReport";
             this.lblSummaryReport.Size = new System.Drawing.Size(260, 33);
             this.lblSummaryReport.TabIndex = 22;
             this.lblSummaryReport.Text = "Summary Report";
             // 
-            // panel1
+            // Spanel
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(142)))), ((int)(((byte)(163)))));
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.btnUpdateStudentInfo);
-            this.panel1.Controls.Add(this.btnViewAllStudents);
-            this.panel1.Controls.Add(this.btnAddStudent);
-            this.panel1.Controls.Add(this.btnBack);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(159, 401);
-            this.panel1.TabIndex = 23;
+            this.Spanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(142)))), ((int)(((byte)(163)))));
+            this.Spanel.Controls.Add(this.button2);
+            this.Spanel.Controls.Add(this.btnUpdateStudentInfo);
+            this.Spanel.Controls.Add(this.btnDeleteStudent);
+            this.Spanel.Controls.Add(this.btnViewAllStudents);
+            this.Spanel.Controls.Add(this.btnAddStudent);
+            this.Spanel.Controls.Add(this.btnBack);
+            this.Spanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Spanel.Location = new System.Drawing.Point(0, 0);
+            this.Spanel.Name = "Spanel";
+            this.Spanel.Size = new System.Drawing.Size(159, 401);
+            this.Spanel.TabIndex = 23;
             // 
             // button2
             // 
@@ -205,7 +211,7 @@
             this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
             this.btnBack.Location = new System.Drawing.Point(0, 0);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(157, 56);
+            this.btnBack.Size = new System.Drawing.Size(159, 56);
             this.btnBack.TabIndex = 24;
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
@@ -222,7 +228,7 @@
             this.btnDeleteStudent.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteStudent.Image")));
             this.btnDeleteStudent.Location = new System.Drawing.Point(0, 266);
             this.btnDeleteStudent.Name = "btnDeleteStudent";
-            this.btnDeleteStudent.Size = new System.Drawing.Size(159, 72);
+            this.btnDeleteStudent.Size = new System.Drawing.Size(156, 72);
             this.btnDeleteStudent.TabIndex = 26;
             this.btnDeleteStudent.Text = "Remove Student";
             this.btnDeleteStudent.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -236,7 +242,7 @@
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitBtn.Image = ((System.Drawing.Image)(resources.GetObject("exitBtn.Image")));
-            this.exitBtn.Location = new System.Drawing.Point(572, 12);
+            this.exitBtn.Location = new System.Drawing.Point(482, 6);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(38, 35);
             this.exitBtn.TabIndex = 29;
@@ -244,16 +250,42 @@
             this.exitBtn.UseVisualStyleBackColor = false;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
+            // hidePanel
+            // 
+            this.hidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(142)))), ((int)(((byte)(163)))));
+            this.hidePanel.Controls.Add(this.hideBtn);
+            this.hidePanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.hidePanel.Location = new System.Drawing.Point(159, 0);
+            this.hidePanel.Name = "hidePanel";
+            this.hidePanel.Size = new System.Drawing.Size(19, 401);
+            this.hidePanel.TabIndex = 32;
+            // 
+            // hideBtn
+            // 
+            this.hideBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(142)))), ((int)(((byte)(163)))));
+            this.hideBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.hideBtn.Image = ((System.Drawing.Image)(resources.GetObject("hideBtn.Image")));
+            this.hideBtn.Location = new System.Drawing.Point(0, 167);
+            this.hideBtn.Name = "hideBtn";
+            this.hideBtn.Size = new System.Drawing.Size(19, 56);
+            this.hideBtn.TabIndex = 26;
+            this.hideBtn.UseVisualStyleBackColor = true;
+            this.hideBtn.Click += new System.EventHandler(this.hideBtn_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // frmSummaryReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(92)))), ((int)(((byte)(127)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(622, 401);
+            this.ClientSize = new System.Drawing.Size(537, 401);
+            this.Controls.Add(this.hidePanel);
             this.Controls.Add(this.exitBtn);
-            this.Controls.Add(this.btnDeleteStudent);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.Spanel);
             this.Controls.Add(this.lblSummaryReport);
             this.Controls.Add(this.txtAverageAgeOfStudents);
             this.Controls.Add(this.txtTotalNumberOfStudents);
@@ -262,12 +294,13 @@
             this.Controls.Add(this.lblTotalNumberOfStudents);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(622, 401);
-            this.MinimumSize = new System.Drawing.Size(622, 401);
+            this.MaximumSize = new System.Drawing.Size(537, 401);
+            this.MinimumSize = new System.Drawing.Size(537, 401);
             this.Name = "frmSummaryReport";
             this.Text = "frmSummaryReport";
             this.Load += new System.EventHandler(this.frmSummaryReport_Load);
-            this.panel1.ResumeLayout(false);
+            this.Spanel.ResumeLayout(false);
+            this.hidePanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,7 +314,7 @@
         private System.Windows.Forms.TextBox txtTotalNumberOfStudents;
         private System.Windows.Forms.TextBox txtAverageAgeOfStudents;
         private System.Windows.Forms.Label lblSummaryReport;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel Spanel;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnAddStudent;
         private System.Windows.Forms.Button btnViewAllStudents;
@@ -289,5 +322,8 @@
         private System.Windows.Forms.Button btnDeleteStudent;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button exitBtn;
+        private System.Windows.Forms.Panel hidePanel;
+        private System.Windows.Forms.Button hideBtn;
+        private System.Windows.Forms.Timer timer1;
     }
 }

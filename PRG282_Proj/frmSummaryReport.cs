@@ -14,9 +14,14 @@ namespace PRG282_Proj
 {
     public partial class frmSummaryReport : Form
     {
+        int PW;
+        bool Hided;
+
         public frmSummaryReport()
         {
             InitializeComponent();
+            PW = Spanel.Width;
+            Hided = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -140,6 +145,37 @@ namespace PRG282_Proj
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void hideBtn_Click(object sender, EventArgs e)
+        {
+            if (Hided) hideBtn.Text = "";
+            else hideBtn.Text = "";
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (Hided)
+            {
+                Spanel.Width = Spanel.Width + 20;
+                if (Spanel.Width >= PW)
+                {
+                    timer1.Stop();
+                    Hided = false;
+                    this.Refresh();
+                }
+            }
+            else
+            {
+                Spanel.Width = Spanel.Width - 20;
+                if (Spanel.Width <= 0)
+                {
+                    timer1.Stop();
+                    Hided = true;
+                    this.Refresh();
+                }
             }
         }
     }

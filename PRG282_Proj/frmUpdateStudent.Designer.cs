@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUpdateStudent));
             this.label1 = new System.Windows.Forms.Label();
             this.StudentID = new System.Windows.Forms.TextBox();
@@ -46,15 +47,19 @@
             this.txtStudentAge = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.exitBtn = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.Spanel = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.btnSummaryReport = new System.Windows.Forms.Button();
             this.btnDeleteStudent = new System.Windows.Forms.Button();
             this.btnViewAllStudents = new System.Windows.Forms.Button();
             this.btnAddStudent = new System.Windows.Forms.Button();
+            this.hidePanel = new System.Windows.Forms.Panel();
+            this.hideBtn = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.Spanel.SuspendLayout();
+            this.hidePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -62,7 +67,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Bright", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(209, 23);
+            this.label1.Location = new System.Drawing.Point(212, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(315, 24);
             this.label1.TabIndex = 0;
@@ -72,10 +77,10 @@
             // 
             this.StudentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StudentID.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.StudentID.Location = new System.Drawing.Point(302, 75);
+            this.StudentID.Location = new System.Drawing.Point(230, 73);
             this.StudentID.Multiline = true;
             this.StudentID.Name = "StudentID";
-            this.StudentID.Size = new System.Drawing.Size(189, 30);
+            this.StudentID.Size = new System.Drawing.Size(297, 30);
             this.StudentID.TabIndex = 1;
             this.StudentID.Text = "Enter Student ID...";
             // 
@@ -85,7 +90,7 @@
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSearch.Location = new System.Drawing.Point(514, 75);
+            this.btnSearch.Location = new System.Drawing.Point(546, 73);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(80, 30);
             this.btnSearch.TabIndex = 3;
@@ -97,7 +102,7 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(176, 115);
+            this.dataGridView1.Location = new System.Drawing.Point(185, 119);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(441, 60);
             this.dataGridView1.TabIndex = 4;
@@ -108,7 +113,7 @@
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnUpdate.Location = new System.Drawing.Point(529, 366);
+            this.btnUpdate.Location = new System.Drawing.Point(609, 366);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(88, 32);
             this.btnUpdate.TabIndex = 5;
@@ -136,7 +141,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(354, 182);
+            this.label2.Location = new System.Drawing.Point(213, 182);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 18);
             this.label2.TabIndex = 7;
@@ -147,7 +152,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(206, 270);
+            this.label3.Location = new System.Drawing.Point(219, 261);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 16);
             this.label3.TabIndex = 8;
@@ -158,7 +163,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(230, 225);
+            this.label4.Location = new System.Drawing.Point(240, 221);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(26, 16);
             this.label4.TabIndex = 9;
@@ -169,7 +174,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(218, 315);
+            this.label5.Location = new System.Drawing.Point(228, 308);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 16);
             this.label5.TabIndex = 10;
@@ -184,7 +189,7 @@
             "BIT",
             "DIT",
             "National Certificate"});
-            this.cbStudentCourse.Location = new System.Drawing.Point(302, 356);
+            this.cbStudentCourse.Location = new System.Drawing.Point(327, 347);
             this.cbStudentCourse.Name = "cbStudentCourse";
             this.cbStudentCourse.Size = new System.Drawing.Size(169, 21);
             this.cbStudentCourse.TabIndex = 11;
@@ -195,7 +200,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(200, 361);
+            this.label6.Location = new System.Drawing.Point(213, 352);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 16);
             this.label6.TabIndex = 12;
@@ -203,21 +208,21 @@
             // 
             // txtStudentID
             // 
-            this.txtStudentID.Location = new System.Drawing.Point(302, 221);
+            this.txtStudentID.Location = new System.Drawing.Point(327, 217);
             this.txtStudentID.Name = "txtStudentID";
             this.txtStudentID.Size = new System.Drawing.Size(169, 20);
             this.txtStudentID.TabIndex = 13;
             // 
             // txtStudentName
             // 
-            this.txtStudentName.Location = new System.Drawing.Point(302, 266);
+            this.txtStudentName.Location = new System.Drawing.Point(327, 261);
             this.txtStudentName.Name = "txtStudentName";
             this.txtStudentName.Size = new System.Drawing.Size(169, 20);
             this.txtStudentName.TabIndex = 14;
             // 
             // txtStudentAge
             // 
-            this.txtStudentAge.Location = new System.Drawing.Point(302, 311);
+            this.txtStudentAge.Location = new System.Drawing.Point(327, 304);
             this.txtStudentAge.Name = "txtStudentAge";
             this.txtStudentAge.Size = new System.Drawing.Size(169, 20);
             this.txtStudentAge.TabIndex = 15;
@@ -225,7 +230,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(255, 75);
+            this.pictureBox2.Location = new System.Drawing.Point(185, 73);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(28, 28);
             this.pictureBox2.TabIndex = 27;
@@ -237,7 +242,7 @@
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitBtn.Image = ((System.Drawing.Image)(resources.GetObject("exitBtn.Image")));
-            this.exitBtn.Location = new System.Drawing.Point(579, 12);
+            this.exitBtn.Location = new System.Drawing.Point(659, 12);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(38, 35);
             this.exitBtn.TabIndex = 28;
@@ -245,20 +250,20 @@
             this.exitBtn.UseVisualStyleBackColor = false;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
-            // panel1
+            // Spanel
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(142)))), ((int)(((byte)(163)))));
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.btnSummaryReport);
-            this.panel1.Controls.Add(this.btnDeleteStudent);
-            this.panel1.Controls.Add(this.btnViewAllStudents);
-            this.panel1.Controls.Add(this.btnAddStudent);
-            this.panel1.Controls.Add(this.btnBack);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(160, 410);
-            this.panel1.TabIndex = 29;
+            this.Spanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(142)))), ((int)(((byte)(163)))));
+            this.Spanel.Controls.Add(this.button1);
+            this.Spanel.Controls.Add(this.btnSummaryReport);
+            this.Spanel.Controls.Add(this.btnDeleteStudent);
+            this.Spanel.Controls.Add(this.btnViewAllStudents);
+            this.Spanel.Controls.Add(this.btnAddStudent);
+            this.Spanel.Controls.Add(this.btnBack);
+            this.Spanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Spanel.Location = new System.Drawing.Point(0, 0);
+            this.Spanel.Name = "Spanel";
+            this.Spanel.Size = new System.Drawing.Size(160, 410);
+            this.Spanel.TabIndex = 29;
             // 
             // button1
             // 
@@ -356,14 +361,41 @@
             this.btnAddStudent.UseVisualStyleBackColor = false;
             this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
             // 
+            // hidePanel
+            // 
+            this.hidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(142)))), ((int)(((byte)(163)))));
+            this.hidePanel.Controls.Add(this.hideBtn);
+            this.hidePanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.hidePanel.Location = new System.Drawing.Point(160, 0);
+            this.hidePanel.Name = "hidePanel";
+            this.hidePanel.Size = new System.Drawing.Size(19, 410);
+            this.hidePanel.TabIndex = 33;
+            // 
+            // hideBtn
+            // 
+            this.hideBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(142)))), ((int)(((byte)(163)))));
+            this.hideBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.hideBtn.Image = ((System.Drawing.Image)(resources.GetObject("hideBtn.Image")));
+            this.hideBtn.Location = new System.Drawing.Point(0, 182);
+            this.hideBtn.Name = "hideBtn";
+            this.hideBtn.Size = new System.Drawing.Size(19, 56);
+            this.hideBtn.TabIndex = 26;
+            this.hideBtn.UseVisualStyleBackColor = true;
+            this.hideBtn.Click += new System.EventHandler(this.hideBtn_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // frmUpdateStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(92)))), ((int)(((byte)(127)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(629, 410);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(709, 410);
+            this.Controls.Add(this.hidePanel);
+            this.Controls.Add(this.Spanel);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.txtStudentAge);
@@ -381,14 +413,14 @@
             this.Controls.Add(this.StudentID);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(629, 410);
             this.MinimumSize = new System.Drawing.Size(629, 410);
             this.Name = "frmUpdateStudent";
             this.Text = "frmUpdateStudent";
             this.Load += new System.EventHandler(this.frmUpdateStudent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel1.ResumeLayout(false);
+            this.Spanel.ResumeLayout(false);
+            this.hidePanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -413,11 +445,14 @@
         private System.Windows.Forms.TextBox txtStudentAge;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button exitBtn;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel Spanel;
         private System.Windows.Forms.Button btnAddStudent;
         private System.Windows.Forms.Button btnViewAllStudents;
         private System.Windows.Forms.Button btnDeleteStudent;
         private System.Windows.Forms.Button btnSummaryReport;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel hidePanel;
+        private System.Windows.Forms.Button hideBtn;
+        private System.Windows.Forms.Timer timer1;
     }
 }
