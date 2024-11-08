@@ -91,12 +91,11 @@
             // 
             this.lblInfo.AutoSize = true;
             this.lblInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfo.Location = new System.Drawing.Point(51, 157);
+            this.lblInfo.Location = new System.Drawing.Point(51, 129);
             this.lblInfo.Name = "lblInfo";
-            this.lblInfo.Size = new System.Drawing.Size(446, 200);
+            this.lblInfo.Size = new System.Drawing.Size(461, 250);
             this.lblInfo.TabIndex = 33;
-            this.lblInfo.Text = "What I like:\r\n\r\nDoing nothing productive on a weekend\r\nEating an unreasonable amo" +
-    "unt of desert\r\n\r\nWhat I dislike: \r\n\r\nSmall talk :)";
+            this.lblInfo.Text = resources.GetString("lblInfo.Text");
             this.lblInfo.Click += new System.EventHandler(this.lblInfo_Click);
             // 
             // frmHeinerFreitag
