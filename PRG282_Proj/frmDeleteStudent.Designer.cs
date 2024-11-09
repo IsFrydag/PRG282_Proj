@@ -48,6 +48,7 @@
             this.hidePanel = new System.Windows.Forms.Panel();
             this.hideBtn = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.txtInfo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Spanel.SuspendLayout();
@@ -311,6 +312,14 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // txtInfo
+            // 
+            this.txtInfo.Location = new System.Drawing.Point(302, 2);
+            this.txtInfo.Name = "txtInfo";
+            this.txtInfo.Size = new System.Drawing.Size(167, 20);
+            this.txtInfo.TabIndex = 33;
+            this.txtInfo.Text = "*Info. To delete multiple IDs, press \"ctrl\".";
+            // 
             // frmDeleteStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -318,6 +327,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(92)))), ((int)(((byte)(127)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(643, 392);
+            this.Controls.Add(this.txtInfo);
             this.Controls.Add(this.hidePanel);
             this.Controls.Add(this.btnShowAllRecords);
             this.Controls.Add(this.Spanel);
@@ -362,5 +372,6 @@
         private System.Windows.Forms.Panel hidePanel;
         private System.Windows.Forms.Button hideBtn;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TextBox txtInfo;
     }
 }
