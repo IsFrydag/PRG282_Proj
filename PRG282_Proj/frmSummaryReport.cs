@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace PRG282_Proj
 {
     public partial class frmSummaryReport : Form
@@ -44,6 +45,7 @@ namespace PRG282_Proj
                     string[] lines = File.ReadAllLines(fileName);
                     int totalStudents = lines.Length;
                     int totalAge = 0;
+                    
 
                     for (int i = 0; i < lines.Length; i++)
                     {
@@ -52,7 +54,7 @@ namespace PRG282_Proj
 
                         if (parts.Length > 1)
                         {
-                            string ageString = parts[0].Trim();
+                            string ageString = parts[2].Trim();
                             totalAge += int.Parse(ageString);
                         }
                     }
@@ -61,6 +63,7 @@ namespace PRG282_Proj
 
                     txtTotalNumberOfStudents.Text = totalStudents.ToString();
                     txtAverageAgeOfStudents.Text = averageAge.ToString(); 
+                   
 
 
                 }
