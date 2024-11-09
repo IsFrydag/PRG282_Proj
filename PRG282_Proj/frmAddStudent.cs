@@ -87,7 +87,7 @@ namespace PRG282_Proj
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            //once register button is clicked check if the file first exists but create one if it does not exist
+            //once register button is clicked check if the file exists but creates one if it does not exist
             if (!File.Exists(fileName))
             {
                 try
@@ -116,7 +116,14 @@ namespace PRG282_Proj
 
             Student student = new Student(studentID, studentName, studentAge, studentCourse);
 
-            if(txtStudentID.Text.Length != 6)
+            if(students.Any(s => s.Split(',')[0] == studentID))
+            {
+
+                MessageBox.Show("Student ID already exists. Please enter a unique ID.");
+                return;
+
+            }
+            else if(txtStudentID.Text.Length != 6)
             {
 
                 MessageBox.Show("Student ID must be exactly 6 digits long.");
@@ -147,7 +154,7 @@ namespace PRG282_Proj
                 students.Add(student.ToString());
                 SaveStudent();
 
-                txtStudentID.Text = "";
+                txtStudentID.Text = "000000";
                 txtStudentName.Text = "";
                 txtStudentAge.Text = "";
                 cbStudentCourse.Text = "";
@@ -201,7 +208,7 @@ namespace PRG282_Proj
 
         private void button1_Click(object sender, EventArgs e)
         {
-           thisIsUs us = new thisIsUs();
+            thisIsUs us = new thisIsUs();
             us.Show();
             this.Hide();
         }

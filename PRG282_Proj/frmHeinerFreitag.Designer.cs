@@ -99,6 +99,7 @@
             this.textBox1.Size = new System.Drawing.Size(314, 217);
             this.textBox1.TabIndex = 33;
             this.textBox1.Text = resources.GetString("textBox1.Text");
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // frmHeinerFreitag
             // 

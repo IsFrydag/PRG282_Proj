@@ -38,5 +38,10 @@ namespace PRG282_Proj
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
