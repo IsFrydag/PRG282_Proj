@@ -22,10 +22,12 @@ namespace PRG282_Proj
             InitializeComponent();
             PW = Spanel.Width;
             Hided = false;
-        }
+            //When you click on a cell then it selects the entire row.
+            dataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            //Prevent cells from being edited.
+            dataGridView.ReadOnly = true;
 
-        
-        DataTable dt = new DataTable();
+        }
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -89,6 +91,7 @@ namespace PRG282_Proj
 
         }
 
+        DataTable dt = new DataTable();
         private void frmDeleteStudent_Load(object sender, EventArgs e)
         {
             dt.Columns.Add("ID", typeof(int));
@@ -138,9 +141,16 @@ namespace PRG282_Proj
         {
             if (dataGridView.SelectedRows.Count > 0)
             {
-                int selectedId = (int)dataGridView.SelectedRows[0].Cells["ID"].Value;
 
-                var result = MessageBox.Show($"Are you sure you want to delete the record with ID {selectedId}?",
+                List<int> ids = new List<int>();
+                foreach (DataGridViewRow selectedRow in dataGridView.SelectedRows)
+                {
+                    int selectedId = (int)selectedRow.Cells["ID"].Value;
+                    ids.Add(selectedId);
+                }
+
+                string idsToDelete = string.Join(", ", ids);
+                var result = MessageBox.Show($"Are you sure you want to delete the record with IDs {idsToDelete}?",
                                               "Confirm Deletion",
                                               MessageBoxButtons.OKCancel,
                                               MessageBoxIcon.Warning);
@@ -157,7 +167,7 @@ namespace PRG282_Proj
                         string[] values = line.Split(',');
                         if (values.Length > 0 && int.TryParse(values[0].Trim(), out int id))
                         {
-                            if (id != selectedId)
+                            if (!ids.Contains(id))
                             {
                                 updatedLines.Add(line);
                             }
@@ -181,7 +191,7 @@ namespace PRG282_Proj
 
                     if (recordFound)
                     {
-                        MessageBox.Show($"{selectedId} deleted from the file.");
+                        MessageBox.Show($"{idsToDelete} deleted from the file.");
                     }
                     else
                     {
