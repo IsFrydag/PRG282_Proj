@@ -115,6 +115,7 @@
             this.MaximumSize = new System.Drawing.Size(602, 450);
             this.MinimumSize = new System.Drawing.Size(602, 450);
             this.Name = "frmArmandSnyman";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmArmandSnyman";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

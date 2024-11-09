@@ -209,6 +209,7 @@
             this.MaximumSize = new System.Drawing.Size(750, 450);
             this.MinimumSize = new System.Drawing.Size(750, 450);
             this.Name = "thisIsUs";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "thisIsUs";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

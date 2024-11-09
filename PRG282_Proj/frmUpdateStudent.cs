@@ -229,5 +229,10 @@ namespace PRG282_Proj
                 }
             }
         }
+
+        private void StudentID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

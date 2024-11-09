@@ -133,7 +133,7 @@ namespace PRG282_Proj
             }
             else
             {
-                MessageBox.Show("Please enter valid input.");
+                MessageBox.Show("Please enter ID with 6 digits.");
             }
         }
 

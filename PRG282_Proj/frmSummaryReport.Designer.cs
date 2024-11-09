@@ -301,6 +301,7 @@
             this.MaximumSize = new System.Drawing.Size(537, 401);
             this.MinimumSize = new System.Drawing.Size(537, 401);
             this.Name = "frmSummaryReport";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSummaryReport";
             this.Load += new System.EventHandler(this.frmSummaryReport_Load);
             this.Spanel.ResumeLayout(false);

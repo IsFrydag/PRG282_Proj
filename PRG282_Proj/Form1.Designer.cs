@@ -227,6 +227,7 @@
             this.MaximumSize = new System.Drawing.Size(711, 489);
             this.MinimumSize = new System.Drawing.Size(711, 489);
             this.Name = "frmHomePage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmHomePage_Load);
             this.panel1.ResumeLayout(false);

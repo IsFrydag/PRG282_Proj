@@ -83,6 +83,7 @@
             this.StudentID.Size = new System.Drawing.Size(297, 30);
             this.StudentID.TabIndex = 1;
             this.StudentID.Text = "Enter Student ID...";
+            this.StudentID.TextChanged += new System.EventHandler(this.StudentID_TextChanged);
             // 
             // btnSearch
             // 
@@ -419,6 +420,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(629, 410);
             this.Name = "frmUpdateStudent";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmUpdateStudent";
             this.Load += new System.EventHandler(this.frmUpdateStudent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
