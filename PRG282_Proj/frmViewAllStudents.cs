@@ -35,10 +35,17 @@ namespace PRG282_Proj
 
             dataGridView1.DataSource = dt;
 
+            //When you click on a cell then it selects the entire row.
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            //Prevent cells from being edited.
+            dataGridView1.ReadOnly = true;
+
         }
 
         private void btnViewAllStudents_Click(object sender, EventArgs e)
         {
+            dt.Rows.Clear();
+
             string[] lines = File.ReadAllLines(filePath);
             string[] values;
 
