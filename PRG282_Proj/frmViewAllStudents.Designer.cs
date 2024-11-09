@@ -52,6 +52,7 @@
             // btnViewAllStudents
             // 
             this.btnViewAllStudents.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnViewAllStudents.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnViewAllStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewAllStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewAllStudents.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -70,7 +71,7 @@
             this.lblViewAllStudents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(92)))), ((int)(((byte)(127)))));
             this.lblViewAllStudents.Font = new System.Drawing.Font("Lucida Bright", 21.75F, System.Drawing.FontStyle.Bold);
             this.lblViewAllStudents.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblViewAllStudents.Location = new System.Drawing.Point(170, 25);
+            this.lblViewAllStudents.Location = new System.Drawing.Point(196, 25);
             this.lblViewAllStudents.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblViewAllStudents.Name = "lblViewAllStudents";
             this.lblViewAllStudents.Size = new System.Drawing.Size(278, 33);
@@ -98,7 +99,7 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(170, 87);
+            this.dataGridView1.Location = new System.Drawing.Point(192, 86);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -223,10 +224,11 @@
             // exitBtn
             // 
             this.exitBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(142)))), ((int)(((byte)(163)))));
+            this.exitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitBtn.Image = ((System.Drawing.Image)(resources.GetObject("exitBtn.Image")));
-            this.exitBtn.Location = new System.Drawing.Point(575, 7);
+            this.exitBtn.Location = new System.Drawing.Point(608, 7);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(38, 35);
             this.exitBtn.TabIndex = 26;
@@ -246,6 +248,7 @@
             // 
             // hideBtn
             // 
+            this.hideBtn.Cursor = System.Windows.Forms.Cursors.PanWest;
             this.hideBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(142)))), ((int)(((byte)(163)))));
             this.hideBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.hideBtn.Image = ((System.Drawing.Image)(resources.GetObject("hideBtn.Image")));
@@ -266,7 +269,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(623, 399);
+            this.ClientSize = new System.Drawing.Size(658, 399);
             this.Controls.Add(this.hidePanel);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.Spanel);
@@ -275,8 +278,8 @@
             this.Controls.Add(this.btnViewAllStudents);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MaximumSize = new System.Drawing.Size(623, 399);
-            this.MinimumSize = new System.Drawing.Size(623, 399);
+            this.MaximumSize = new System.Drawing.Size(658, 399);
+            this.MinimumSize = new System.Drawing.Size(658, 399);
             this.Name = "frmViewAllStudents";
             this.Text = "frmViewAllStudents";
             this.Load += new System.EventHandler(this.frmViewAllStudents_Load);

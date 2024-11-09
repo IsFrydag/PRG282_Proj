@@ -131,7 +131,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAACzRJREFUeF7tW3tQVNcZdzpNp81M05k+pmmTTiedtuk/nWm7D9CgKLK8lN27Cwsx
+        DQAACw0B7QfALAAACzRJREFUeF7tW3tQVNcZdzpNp81M05k+pmmTTiedtuk/nWm7D9CgKLK8lN27Cwsx
         CRJRAY1iwEfYvffuwiLKQrCCC/vioRIQiYI8dhftJE2j8UGM01aDjzxM81TzEHQXxAdfz7k5JMQco6ws
         3F38zfxmGNh7vt/323PO952zy7R7uIepDeN8yc91jCyF00itBq28h0+SnWfV0gG9SnKDZWRDvEZ2wZgs
         6+WT5M58lSQhVxv+I/Lo1IXROO17eqVMjQw7yKmlV0oyH7tkZ+cMv1CmgN1V8dDuTICurfOhs24etFrj
@@ -182,7 +182,7 @@
         7f9dSrpZySeSRgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="lblInfo.Text" xml:space="preserve">
+  <data name="textBox1.Text" xml:space="preserve">
     <value>What I like:
 
 Cycling, squash, tennis, hockey etc.
@@ -192,6 +192,8 @@ or absolutely nothing
 
 What I dislike: 
 
-Just stop oil activists and loadshedding</value>
+Just stop oil activists and loadshedding
+
+</value>
   </data>
 </root>
