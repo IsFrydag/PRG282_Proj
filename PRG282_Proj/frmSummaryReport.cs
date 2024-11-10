@@ -27,7 +27,9 @@ namespace PRG282_Proj
 
         private void button2_Click(object sender, EventArgs e)
         {
-           thisIsUs us = new thisIsUs();
+            //button takes you to frmthisIsUs
+
+            thisIsUs us = new thisIsUs();
             us.Show();
             this.Hide();
         }
@@ -36,13 +38,14 @@ namespace PRG282_Proj
         {
 
 
-            //
+            //The form loads, when the form loads, do the following.
             string fileName = "students.txt";
 
             if (File.Exists(fileName))
             {
                 try
                 {
+                    //Write file contents to string.
                     string[] lines = File.ReadAllLines(fileName);
                     int totalStudents = lines.Length;
                     int totalAge = 0;
@@ -56,10 +59,12 @@ namespace PRG282_Proj
                         if (parts.Length > 0)
                         {
                             string ageString = parts[2].Trim();
+                            //Add to total age.
                             totalAge += int.Parse(ageString);
                         }
                     }
 
+                    //Calculate average age.
                     double averageAge = (double)totalAge / totalStudents;
 
                     txtTotalNumberOfStudents.Text = totalStudents.ToString();
@@ -83,6 +88,7 @@ namespace PRG282_Proj
 
         private void btnViewAllStudents_Click(object sender, EventArgs e)
         {
+            //button takes you to frmViewAllStudents
 
             frmViewAllStudents view = new frmViewAllStudents();
             view.Show();
@@ -92,6 +98,7 @@ namespace PRG282_Proj
 
         private void btnUpdateStudentInfo_Click(object sender, EventArgs e)
         {
+            //button takes you to frmUpdateStudentInfo
 
             frmUpdateStudent up = new frmUpdateStudent();
             up.Show();
@@ -101,6 +108,7 @@ namespace PRG282_Proj
 
         private void btnDeleteStudent_Click(object sender, EventArgs e)
         {
+            //button takes you to frmDeleteStudent
 
             frmDeleteStudent delete = new frmDeleteStudent();
             delete.Show();
@@ -110,6 +118,7 @@ namespace PRG282_Proj
 
         private void btnBack_Click(object sender, EventArgs e)
         {
+            //button takes you to homepage
 
             frmHomePage home = new frmHomePage();
             home.Show();
@@ -119,6 +128,8 @@ namespace PRG282_Proj
 
         private void exitBtn_Click(object sender, EventArgs e)
         {
+            //X button in the top right of the window to exit the application
+
             Application.Exit();
         }
 
@@ -143,6 +154,7 @@ namespace PRG282_Proj
 
             try
             {
+                //Write to file, the content.
                 File.WriteAllText(saveSummary, content);
                 MessageBox.Show("Summary saved to " + saveSummary);
             }
@@ -154,6 +166,8 @@ namespace PRG282_Proj
 
         private void hideBtn_Click(object sender, EventArgs e)
         {
+            //button hides navigation panel on the left
+
             if (Hided) hideBtn.Text = "";
             else hideBtn.Text = "";
             timer1.Start();
@@ -161,6 +175,9 @@ namespace PRG282_Proj
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+
+            //this method helps with making the open and closing of the panel smoother
+
             if (Hided)
             {
                 Spanel.Width = Spanel.Width + 20;

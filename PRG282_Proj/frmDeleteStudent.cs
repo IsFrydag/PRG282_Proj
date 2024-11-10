@@ -41,13 +41,16 @@ namespace PRG282_Proj
 
         private void button4_Click(object sender, EventArgs e)
         {
-           thisIsUs us = new thisIsUs();
+            //button takes you to frmthisIsUs
+
+            thisIsUs us = new thisIsUs();
             us.Show();
             this.Hide();
         }
 
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
+            //button takes you to frmAddStudent
 
             frmAddStudent add = new frmAddStudent();
             add.Show();
@@ -57,6 +60,7 @@ namespace PRG282_Proj
 
         private void btnViewAllStudents_Click(object sender, EventArgs e)
         {
+            //button takes you to frmViewAllStudents
 
             frmViewAllStudents view = new frmViewAllStudents();
             view.Show();
@@ -66,6 +70,7 @@ namespace PRG282_Proj
 
         private void btnUpdateStudentInfo_Click(object sender, EventArgs e)
         {
+            //button takes you to frmUpdateStudentInfo
 
             frmUpdateStudent up = new frmUpdateStudent();
             up.Show();
@@ -75,7 +80,7 @@ namespace PRG282_Proj
 
         private void btnSummaryReport_Click(object sender, EventArgs e)
         {
-
+            //button takes you to frmSummaryReport
 
             frmSummaryReport sum = new frmSummaryReport();
             sum.Show();
@@ -84,6 +89,7 @@ namespace PRG282_Proj
 
         private void btnBack_Click(object sender, EventArgs e)
         {
+            //button takes you to homepage
 
             frmHomePage home = new frmHomePage();
             home.Show();
@@ -92,9 +98,13 @@ namespace PRG282_Proj
         }
 
         DataTable dt = new DataTable();
+
         private void frmDeleteStudent_Load(object sender, EventArgs e)
         {
-            dt.Columns.Add("ID", typeof(int));
+            //Form loads, when the form loads the following must be executed.
+
+            //add columns to datatable.
+            dt.Columns.Add("ID", typeof(string));
             dt.Columns.Add("Name", typeof(string));
             dt.Columns.Add("Age", typeof(string));
             dt.Columns.Add("Course", typeof(string));
@@ -115,12 +125,15 @@ namespace PRG282_Proj
                 }
                 dt.Rows.Add(rows);
             }
+            MessageBox.Show("*Info. To delete multiple IDs, press \"ctrl\".",
+                "Press OK to continue.", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            //used to search for a specific ID.
             string studentIDText = txtEnterStudentID.Text;
-
+            //parse to an int and filter to that int.
             if (int.TryParse(studentIDText, out int id))
             {
                 DataView dv = new DataView(dt);
@@ -139,13 +152,15 @@ namespace PRG282_Proj
 
         private void btnDeleteStudent_Click(object sender, EventArgs e)
         {
+            //delete a student when a button is clicked.
             if (dataGridView.SelectedRows.Count > 0)
             {
 
                 List<int> ids = new List<int>();
+                //add to list
                 foreach (DataGridViewRow selectedRow in dataGridView.SelectedRows)
                 {
-                    int selectedId = (int)selectedRow.Cells["ID"].Value;
+                    int selectedId = Convert.ToInt32(selectedRow.Cells["ID"].Value);
                     ids.Add(selectedId);
                 }
 
@@ -154,14 +169,15 @@ namespace PRG282_Proj
                                               "Confirm Deletion",
                                               MessageBoxButtons.OKCancel,
                                               MessageBoxIcon.Warning);
-
+                // option OK
                 if (result == DialogResult.OK)
                 {
+
                     string[] lines = File.ReadAllLines(@"students.txt");
                     List<string> updatedLines = new List<string>();
 
                     bool recordFound = false;
-
+                    //if id does not match, write to file, else skip.
                     foreach (string line in lines)
                     {
                         string[] values = line.Split(',');
@@ -183,6 +199,7 @@ namespace PRG282_Proj
                     dt.Clear();
                     foreach (string updatedLine in updatedLines)
                     {
+                        //add to datatable
                         string[] values = updatedLine.Split(',');
                         dt.Rows.Add(values);
                     }
@@ -212,11 +229,15 @@ namespace PRG282_Proj
 
         private void exitBtn_Click(object sender, EventArgs e)
         {
+            //X button in the top right of the window to exit the application
+
             Application.Exit();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            //this method helps with making the open and closing of the panel smoother
+
             if (Hided)
             {
                 Spanel.Width = Spanel.Width + 20;
@@ -241,6 +262,8 @@ namespace PRG282_Proj
 
         private void hideBtn_Click(object sender, EventArgs e)
         {
+            //button hides navigation panel on the left
+
             if (Hided) hideBtn.Text = "";
             else hideBtn.Text = "";
             timer1.Start();
