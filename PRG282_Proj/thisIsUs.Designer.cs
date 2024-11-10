@@ -85,12 +85,13 @@
             // btnMilenke
             // 
             this.btnMilenke.Cursor = System.Windows.Forms.Cursors.Help;
+            this.btnMilenke.FlatAppearance.BorderColor = System.Drawing.Color.Lavender;
             this.btnMilenke.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMilenke.Image = ((System.Drawing.Image)(resources.GetObject("btnMilenke.Image")));
             this.btnMilenke.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnMilenke.Location = new System.Drawing.Point(206, 93);
+            this.btnMilenke.Location = new System.Drawing.Point(147, 189);
             this.btnMilenke.Name = "btnMilenke";
-            this.btnMilenke.Size = new System.Drawing.Size(158, 103);
+            this.btnMilenke.Size = new System.Drawing.Size(118, 103);
             this.btnMilenke.TabIndex = 3;
             this.btnMilenke.Text = "Milenke Field";
             this.btnMilenke.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -100,12 +101,13 @@
             // btnArmand
             // 
             this.btnArmand.Cursor = System.Windows.Forms.Cursors.Help;
+            this.btnArmand.FlatAppearance.BorderColor = System.Drawing.Color.Lavender;
             this.btnArmand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnArmand.Image = ((System.Drawing.Image)(resources.GetObject("btnArmand.Image")));
             this.btnArmand.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnArmand.Location = new System.Drawing.Point(530, 93);
+            this.btnArmand.Location = new System.Drawing.Point(602, 268);
             this.btnArmand.Name = "btnArmand";
-            this.btnArmand.Size = new System.Drawing.Size(158, 103);
+            this.btnArmand.Size = new System.Drawing.Size(113, 103);
             this.btnArmand.TabIndex = 5;
             this.btnArmand.Text = "Armand Snyman";
             this.btnArmand.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -115,12 +117,13 @@
             // btnJana
             // 
             this.btnJana.Cursor = System.Windows.Forms.Cursors.Help;
+            this.btnJana.FlatAppearance.BorderColor = System.Drawing.Color.Lavender;
             this.btnJana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnJana.Image = ((System.Drawing.Image)(resources.GetObject("btnJana.Image")));
             this.btnJana.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnJana.Location = new System.Drawing.Point(206, 298);
+            this.btnJana.Location = new System.Drawing.Point(291, 268);
             this.btnJana.Name = "btnJana";
-            this.btnJana.Size = new System.Drawing.Size(158, 103);
+            this.btnJana.Size = new System.Drawing.Size(110, 103);
             this.btnJana.TabIndex = 6;
             this.btnJana.Text = "Jana Rademan";
             this.btnJana.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -130,12 +133,13 @@
             // btnHeiner
             // 
             this.btnHeiner.Cursor = System.Windows.Forms.Cursors.Help;
+            this.btnHeiner.FlatAppearance.BorderColor = System.Drawing.Color.Lavender;
             this.btnHeiner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHeiner.Image = ((System.Drawing.Image)(resources.GetObject("btnHeiner.Image")));
             this.btnHeiner.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnHeiner.Location = new System.Drawing.Point(530, 298);
+            this.btnHeiner.Location = new System.Drawing.Point(451, 189);
             this.btnHeiner.Name = "btnHeiner";
-            this.btnHeiner.Size = new System.Drawing.Size(158, 103);
+            this.btnHeiner.Size = new System.Drawing.Size(97, 103);
             this.btnHeiner.TabIndex = 7;
             this.btnHeiner.Text = "Heiner Freitag";
             this.btnHeiner.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -148,7 +152,7 @@
             this.label1.BackColor = System.Drawing.Color.Lavender;
             this.label1.Font = new System.Drawing.Font("Lucida Bright", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(367, 226);
+            this.label1.Location = new System.Drawing.Point(349, 88);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(176, 33);
             this.label1.TabIndex = 8;
@@ -209,6 +213,7 @@
             this.MaximumSize = new System.Drawing.Size(750, 450);
             this.MinimumSize = new System.Drawing.Size(750, 450);
             this.Name = "thisIsUs";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "thisIsUs";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

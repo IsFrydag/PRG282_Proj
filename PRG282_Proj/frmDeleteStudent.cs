@@ -94,7 +94,7 @@ namespace PRG282_Proj
         DataTable dt = new DataTable();
         private void frmDeleteStudent_Load(object sender, EventArgs e)
         {
-            dt.Columns.Add("ID", typeof(int));
+            55dt.Columns.Add("ID", typeof(int));
             dt.Columns.Add("Name", typeof(string));
             dt.Columns.Add("Age", typeof(string));
             dt.Columns.Add("Course", typeof(string));
@@ -133,7 +133,7 @@ namespace PRG282_Proj
             }
             else
             {
-                MessageBox.Show("Please enter valid input.");
+                MessageBox.Show("Please enter an ID with 6 digits.");
             }
         }
 
@@ -209,10 +209,6 @@ namespace PRG282_Proj
             }
         }
 
-        private void btnShowAllRecords_Click(object sender, EventArgs e)
-        {
-            dataGridView.DataSource = dt;
-        }
 
         private void exitBtn_Click(object sender, EventArgs e)
         {

@@ -29,6 +29,7 @@ namespace PRG282_Proj
         {
            thisIsUs us = new thisIsUs();
             us.Show();
+            this.Hide();
         }
 
         private void frmSummaryReport_Load(object sender, EventArgs e)
@@ -52,7 +53,7 @@ namespace PRG282_Proj
                         string line = lines[i];
                         string[] parts = line.Split(',');
 
-                        if (parts.Length > 1)
+                        if (parts.Length > 0)
                         {
                             string ageString = parts[2].Trim();
                             totalAge += int.Parse(ageString);

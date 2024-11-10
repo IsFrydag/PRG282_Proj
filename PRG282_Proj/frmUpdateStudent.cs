@@ -131,7 +131,7 @@ namespace PRG282_Proj
             }
             else
             {
-                MessageBox.Show("Student ID not found.");
+                MessageBox.Show("Student ID cannot be changed.");
             }
         
     }
@@ -228,6 +228,11 @@ namespace PRG282_Proj
                     this.Refresh();
                 }
             }
+        }
+
+        private void StudentID_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

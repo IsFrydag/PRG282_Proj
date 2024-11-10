@@ -115,6 +115,7 @@
             this.MaximumSize = new System.Drawing.Size(602, 450);
             this.MinimumSize = new System.Drawing.Size(602, 450);
             this.Name = "frmHeinerFreitag";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmHeinerFreitag";
             this.Load += new System.EventHandler(this.frmHeinerFreitag_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

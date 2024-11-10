@@ -281,6 +281,7 @@
             this.MaximumSize = new System.Drawing.Size(658, 399);
             this.MinimumSize = new System.Drawing.Size(658, 399);
             this.Name = "frmViewAllStudents";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmViewAllStudents";
             this.Load += new System.EventHandler(this.frmViewAllStudents_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -365,6 +365,7 @@
             this.MaximumSize = new System.Drawing.Size(541, 393);
             this.MinimumSize = new System.Drawing.Size(541, 393);
             this.Name = "frmAddStudent";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddStudent";
             this.Load += new System.EventHandler(this.frmAddStudent_Load);
             this.Spanel.ResumeLayout(false);

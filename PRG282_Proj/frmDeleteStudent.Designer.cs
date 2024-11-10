@@ -44,7 +44,6 @@
             this.btnUpdateStudentInfo = new System.Windows.Forms.Button();
             this.btnViewAllStudents = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
-            this.btnShowAllRecords = new System.Windows.Forms.Button();
             this.hidePanel = new System.Windows.Forms.Panel();
             this.hideBtn = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -83,7 +82,7 @@
             this.btnDeleteStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteStudent.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnDeleteStudent.Location = new System.Drawing.Point(428, 355);
+            this.btnDeleteStudent.Location = new System.Drawing.Point(513, 355);
             this.btnDeleteStudent.Name = "btnDeleteStudent";
             this.btnDeleteStudent.Size = new System.Drawing.Size(108, 28);
             this.btnDeleteStudent.TabIndex = 23;
@@ -270,21 +269,6 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // btnShowAllRecords
-            // 
-            this.btnShowAllRecords.BackColor = System.Drawing.Color.CadetBlue;
-            this.btnShowAllRecords.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnShowAllRecords.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShowAllRecords.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowAllRecords.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnShowAllRecords.Location = new System.Drawing.Point(220, 355);
-            this.btnShowAllRecords.Name = "btnShowAllRecords";
-            this.btnShowAllRecords.Size = new System.Drawing.Size(143, 28);
-            this.btnShowAllRecords.TabIndex = 30;
-            this.btnShowAllRecords.Text = "Show All Records";
-            this.btnShowAllRecords.UseVisualStyleBackColor = false;
-            this.btnShowAllRecords.Click += new System.EventHandler(this.btnShowAllRecords_Click);
-            // 
             // hidePanel
             // 
             this.hidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(142)))), ((int)(((byte)(163)))));
@@ -314,9 +298,9 @@
             // 
             // txtInfo
             // 
-            this.txtInfo.Location = new System.Drawing.Point(302, 2);
+            this.txtInfo.Location = new System.Drawing.Point(233, 360);
             this.txtInfo.Name = "txtInfo";
-            this.txtInfo.Size = new System.Drawing.Size(167, 20);
+            this.txtInfo.Size = new System.Drawing.Size(207, 20);
             this.txtInfo.TabIndex = 33;
             this.txtInfo.Text = "*Info. To delete multiple IDs, press \"ctrl\".";
             // 
@@ -329,7 +313,6 @@
             this.ClientSize = new System.Drawing.Size(643, 392);
             this.Controls.Add(this.txtInfo);
             this.Controls.Add(this.hidePanel);
-            this.Controls.Add(this.btnShowAllRecords);
             this.Controls.Add(this.Spanel);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.pictureBox1);
@@ -342,6 +325,7 @@
             this.MaximumSize = new System.Drawing.Size(643, 392);
             this.MinimumSize = new System.Drawing.Size(643, 392);
             this.Name = "frmDeleteStudent";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDeleteStudent";
             this.Load += new System.EventHandler(this.frmDeleteStudent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
@@ -368,7 +352,6 @@
         private System.Windows.Forms.Button btnUpdateStudentInfo;
         private System.Windows.Forms.Button btnSummaryReport;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button btnShowAllRecords;
         private System.Windows.Forms.Panel hidePanel;
         private System.Windows.Forms.Button hideBtn;
         private System.Windows.Forms.Timer timer1;
