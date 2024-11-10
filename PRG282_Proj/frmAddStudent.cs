@@ -151,11 +151,11 @@ namespace PRG282_Proj
                 return;
 
             }
-            else if(int.TryParse(txtStudentAge.Text, out int age) && (age < 18 && age > 99))
+            else if(int.TryParse(txtStudentAge.Text, out int age) && (age < 14 && age > 99))
             {
 
-                //checks if the student is older than 18 and younger than 99 as there will most likely not be any students older than 99
-                MessageBox.Show("Please enter valid age older than 18.");
+                //checks if the student is older than 14 and younger than 99 as there will most likely not be any students older than 99
+                MessageBox.Show("Please enter valid age (between the age of 14 and 99).");
 
             }
             else 

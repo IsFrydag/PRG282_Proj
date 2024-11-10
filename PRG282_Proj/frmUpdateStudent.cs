@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PRG282_Proj
 {
@@ -111,32 +112,40 @@ namespace PRG282_Proj
             int studentAge = Convert.ToInt32(txtStudentAge.Text);
             string studentCourse = cbStudentCourse.Text;
 
-            Student studentToUpdate = students.FirstOrDefault(s => s.ID == studentID); //finds the student with the given ID in the students list
+           
+           
 
-            if (studentToUpdate != null)
-            {
-                //updates the student’s name, age, and course
-                studentToUpdate.Name = studentName;
-                studentToUpdate.Age = studentAge;
-                studentToUpdate.Course = studentCourse;
 
+                Student studentToUpdate = students.FirstOrDefault(s => s.ID == studentID); //finds the student with the given ID in the students list
+
+              if (studentToUpdate != null)
+              {
+                    //updates the student’s name, age, and course
+                    studentToUpdate.Name = studentName;
+                    studentToUpdate.Age = studentAge;
+                    studentToUpdate.Course = studentCourse;
+
+                if (studentAge < 14 && studentAge > 99)
+                {
+                    MessageBox.Show("The student must be between the ages of 14 and 99.");
+                }
                
                 SaveStudentsToFile(); // method called, saves the updated list to a file
 
 
-                MessageBox.Show("Student information updated successfully.");
-                txtStudentID.Clear();
-                txtStudentName.Clear();
-                txtStudentAge.Clear();
-                dataGridView1.Rows.Clear(); //clears the input fields and data grid
+                    MessageBox.Show("Student information updated successfully.");
+                    txtStudentID.Clear();
+                    txtStudentName.Clear();
+                    txtStudentAge.Clear();
+                    dataGridView1.Rows.Clear(); //clears the input fields and data grid
 
-            }
-            else
-            {
-                MessageBox.Show("Student ID cannot be changed.");
-            }
-        
-    }
+              }
+              else
+                {
+                    MessageBox.Show("Student ID cannot be changed.");
+                }
+            
+        }
         private void SaveStudentsToFile() //method writes all student records from the students list to the specified file(called earlier)
         {
             using (StreamWriter writer = new StreamWriter(fileName)) //makes sure that the file is properly closed after writing( to avoid potential file access issues later)
