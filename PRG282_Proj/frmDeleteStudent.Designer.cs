@@ -298,11 +298,16 @@
             // 
             // txtInfo
             // 
-            this.txtInfo.Location = new System.Drawing.Point(233, 360);
+            this.txtInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(142)))), ((int)(((byte)(163)))));
+            this.txtInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInfo.ForeColor = System.Drawing.SystemColors.Info;
+            this.txtInfo.Location = new System.Drawing.Point(193, 358);
+            this.txtInfo.Multiline = true;
             this.txtInfo.Name = "txtInfo";
-            this.txtInfo.Size = new System.Drawing.Size(207, 20);
+            this.txtInfo.Size = new System.Drawing.Size(289, 22);
             this.txtInfo.TabIndex = 33;
-            this.txtInfo.Text = "*Info. To delete multiple IDs, press \"ctrl\".";
+            this.txtInfo.Text = "*Note: To delete multiple IDs press \"ctrl\".";
             // 
             // frmDeleteStudent
             // 
