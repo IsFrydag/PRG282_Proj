@@ -45,7 +45,7 @@ namespace PRG282_Proj
             
             if (!File.Exists(fileName))
             {
-                using (FileStream fs = File.Create(fileName)) {
+                using (FileStream fs = File.Create(fileName)) {//file is created if it does not exist
                     using (StreamWriter writer = new StreamWriter(fs))
                     {
                         writer.WriteLine("Student Registered");
