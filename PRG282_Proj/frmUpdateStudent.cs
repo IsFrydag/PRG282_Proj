@@ -17,8 +17,8 @@ namespace PRG282_Proj
     {
         static string fileName = @"students.txt";
 
-        int PW;
-        bool Hided;
+        int PW;     //PW is for Panel Width
+        bool Hided;   
 
         public class Student
         {
@@ -39,11 +39,11 @@ namespace PRG282_Proj
         public frmUpdateStudent()
         {
             InitializeComponent();
-            InitializeDataGridView();
-            LoadStudentsFromFile();
+            InitializeDataGridView(); //this method sets up the datagrid
+            LoadStudentsFromFile();   //this method reads the student.txt file and adds the student objects to the student list
 
             PW = Spanel.Width;
-            Hided = false;
+            Hided = false; //false means the panel is visible
 
         }
        
@@ -64,7 +64,7 @@ namespace PRG282_Proj
                 string[] lines = File.ReadAllLines(fileName);
                 foreach (string line in lines)
                 {
-                    string[] values = line.Split(',');
+                    string[] values = line.Split(','); //splits each line with a comma
                     if (values.Length == 4)
                     {
                         students.Add(new Student
@@ -82,17 +82,17 @@ namespace PRG282_Proj
         private void btnSearch_Click(object sender, EventArgs e)
         {
 
-            string studentID = StudentID.Text.Trim(); 
-            dataGridView1.Rows.Clear();
+            string studentID = StudentID.Text.Trim(); //takes the input from the user
+            dataGridView1.Rows.Clear(); //clears the datagrid when seraching
 
             bool studentFound = false;
 
-            foreach (Student student in students)
+            foreach (Student student in students) //iterates through each Student object in the students list
             {
-                if (string.Equals(student.ID, studentID, StringComparison.OrdinalIgnoreCase))
+                if (string.Equals(student.ID, studentID, StringComparison.OrdinalIgnoreCase)) //checks if the current student’s ID matches the "target" studentID 
                 {
-                    dataGridView1.Rows.Add(student.ID, student.Name, student.Age, student.Course);
-                    studentFound = true;
+                    dataGridView1.Rows.Add(student.ID, student.Name, student.Age, student.Course); //adds the student’s information to dataGridView1 as a new row
+                    studentFound = true; //sets studentFound to true to indicate that the student was found
                     break; 
                 }
             }
@@ -105,29 +105,31 @@ namespace PRG282_Proj
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-
+            //retrieves the student’s ID, name, age, and course from the input fields
             string studentID = txtStudentID.Text;
             string studentName = txtStudentName.Text;
             int studentAge = Convert.ToInt32(txtStudentAge.Text);
             string studentCourse = cbStudentCourse.Text;
 
-            Student studentToUpdate = students.FirstOrDefault(s => s.ID == studentID);
+            Student studentToUpdate = students.FirstOrDefault(s => s.ID == studentID); //finds the student with the given ID in the students list
 
             if (studentToUpdate != null)
             {
-               
+                //updates the student’s name, age, and course
                 studentToUpdate.Name = studentName;
                 studentToUpdate.Age = studentAge;
                 studentToUpdate.Course = studentCourse;
 
                
-                SaveStudentsToFile();
+                SaveStudentsToFile(); // method called, saves the updated list to a file
+
 
                 MessageBox.Show("Student information updated successfully.");
                 txtStudentID.Clear();
                 txtStudentName.Clear();
                 txtStudentAge.Clear();
-                dataGridView1.ClearSelection();
+                dataGridView1.Rows.Clear(); //clears the input fields and data grid
+
             }
             else
             {
@@ -135,9 +137,9 @@ namespace PRG282_Proj
             }
         
     }
-        private void SaveStudentsToFile()
+        private void SaveStudentsToFile() //method writes all student records from the students list to the specified file(called earlier)
         {
-            using (StreamWriter writer = new StreamWriter(fileName))
+            using (StreamWriter writer = new StreamWriter(fileName)) //makes sure that the file is properly closed after writing( to avoid potential file access issues later)
             {
                 foreach (Student student in students)
                 {
@@ -201,6 +203,7 @@ namespace PRG282_Proj
 
         private void hideBtn_Click(object sender, EventArgs e)
         {
+            //when the button gets clicked the timer is started,( sets of the sliding animation)
             if (Hided) hideBtn.Text = "";
             else hideBtn.Text = "";
             timer1.Start();
@@ -210,22 +213,24 @@ namespace PRG282_Proj
         {
             if (Hided)
             {
+                //if Hided is true (panel is hidden), the width of Spanel is incremented by 20 pixels at each tick until it reaches PW, to amke it visible
                 Spanel.Width = Spanel.Width + 20;
                 if (Spanel.Width >= PW)
                 {
                     timer1.Stop();
                     Hided = false;
-                    this.Refresh();
+                    this.Refresh(); //the Hided flag is updated to reflect the panel’s new visibility state
                 }
             }
             else
             {
+                //once the panel reaches the target width, the timer stops,to end the animation
                 Spanel.Width = Spanel.Width - 20;
                 if (Spanel.Width <= 0)
                 {
                     timer1.Stop();
                     Hided = true;
-                    this.Refresh();
+                    this.Refresh(); //the Hided flag is updated to reflect the panel’s new visibility state
                 }
             }
         }

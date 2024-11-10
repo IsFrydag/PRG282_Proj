@@ -94,7 +94,7 @@ namespace PRG282_Proj
         DataTable dt = new DataTable();
         private void frmDeleteStudent_Load(object sender, EventArgs e)
         {
-            55dt.Columns.Add("ID", typeof(int));
+            dt.Columns.Add("ID", typeof(int));
             dt.Columns.Add("Name", typeof(string));
             dt.Columns.Add("Age", typeof(string));
             dt.Columns.Add("Course", typeof(string));
